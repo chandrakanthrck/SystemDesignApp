@@ -1,0 +1,23 @@
+.concept {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .concept h2 {
+    color: #333;
+  }
+  
+  .concept p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .concept-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
