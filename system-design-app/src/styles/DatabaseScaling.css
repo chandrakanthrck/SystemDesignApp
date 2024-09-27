@@ -1,0 +1,117 @@
+/* styles/DatabaseScaling.css */
+
+.scaling-container {
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #f4f6f9;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.scaling-header {
+  font-size: 34px;
+  font-weight: bold;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.scaling-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #34495e;
+  text-align: justify;
+}
+
+.scaling-diagram {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.scaling-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.interactive-section h2 {
+  font-size: 28px;
+  color: #16a085;
+  margin-bottom: 20px;
+}
+
+.scaling-simulation-button {
+  padding: 14px 28px;
+  background-color: #27ae60;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scaling-simulation-button:hover {
+  background-color: #219150;
+}
+
+.scaling-types-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ecf0f1;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scaling-types-section h3 {
+  font-size: 26px;
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+.scaling-types-section p {
+  font-size: 16px;
+  color: #2c3e50;
+  line-height: 1.8;
+}
+
+.scaling-buttons-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.scaling-action-button {
+  padding: 14px 24px;
+  background-color: #2980b9;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scaling-action-button:hover {
+  background-color: #1f6691;
+}
+
+.scaling-footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #7f8c8d;
+}

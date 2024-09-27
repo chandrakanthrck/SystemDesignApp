@@ -1,31 +1,74 @@
+/* styles/App.css */
+
 .App {
-  text-align: center;
+  text-align: left;
+  background-color: #f7fafc; /* Light background for the app */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #2d3748; /* Darker background for contrast */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 200px; /* Reduced the size for better consistency */
   pointer-events: none;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Adding a rounded style */
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-logo:hover {
+  transform: scale(1.05);
+}
+
+.App-title {
+  font-size: 3em;
+  font-weight: bold;
+  color: #e2e8f0; /* Lighter color for contrast */
+  margin-bottom: 10px;
+}
+
+.App-subtitle {
+  font-size: 1.5em;
+  color: #cbd5e0; /* Soft color for the subtitle */
+  margin-bottom: 20px;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #38b2ac;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border: 2px solid #38b2ac;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.App-link:hover {
+  background-color: #38b2ac;
+  color: #f7fafc;
+  transform: translateY(-5px);
+}
+
+.App-content {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #2d3748; /* Darker color for text readability */
+  max-width: 800px;
+  margin: auto;
 }
 
 @keyframes App-logo-spin {

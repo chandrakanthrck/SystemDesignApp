@@ -1,0 +1,81 @@
+/* styles/Caching.css */
+
+.caching-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  background: #f7fafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caching-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2f855a;
+}
+
+.caching-content {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.caching-diagram {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.caching-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.caching-diagram img:hover {
+  transform: scale(1.05);
+}
+
+.interactive-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e6fffa;
+  border-radius: 10px;
+}
+
+.interactive-heading {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #38a169;
+}
+
+.interactive-button {
+  padding: 10px 20px;
+  background-color: #38a169;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.interactive-button:hover {
+  background-color: #2f855a;
+}
+
+.caching-list {
+  margin-top: 20px;
+  list-style-type: square;
+  padding-left: 20px;
+  color: #2d3748;
+}
+
+.caching-note {
+  margin-top: 20px;
+  font-style: italic;
+  color: #4a5568;
+}

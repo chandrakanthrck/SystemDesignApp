@@ -1,0 +1,121 @@
+/* styles/LoadBalancing.css */
+
+.lb-container {
+  padding: 50px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f0f4f8;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.lb-header {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lb-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #34495e;
+  text-align: justify;
+}
+
+.lb-diagram {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.lb-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #eef2f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section h2 {
+  font-size: 28px;
+  color: #0984e3;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lb-example {
+  margin-top: 35px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.lb-example h3 {
+  font-size: 24px;
+  color: #e17055;
+  margin-bottom: 15px;
+}
+
+.lb-example p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2c3e50;
+}
+
+.lb-types {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lb-types h2 {
+  font-size: 28px;
+  color: #00b894;
+  margin-bottom: 20px;
+}
+
+.lb-types p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2c3e50;
+}
+
+.buttons-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.action-button {
+  padding: 14px 24px;
+  background-color: #6c5ce7;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #5a4ca8;
+}
+
+.lb-footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #95a5a6;
+}

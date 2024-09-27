@@ -1,0 +1,118 @@
+/* styles/StrongVsEventualConsistency.css */
+
+.consistency-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consistency-header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.consistency-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #34495e;
+  text-align: justify;
+}
+
+.consistency-diagram {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.consistency-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section {
+  margin-top: 40px;
+  padding: 20px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section h2 {
+  font-size: 24px;
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+.interactive-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.interactive-button:hover {
+  background-color: #2980b9;
+}
+
+.consistency-example {
+  margin-top: 20px;
+  border: 2px solid #3498db;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.consistency-example p {
+  font-size: 16px;
+  color: #34495e;
+}
+
+.consistency-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.consistency-toggle button {
+  padding: 12px 18px;
+  margin: 5px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.consistency-toggle button:hover {
+  background-color: #e67e22;
+}
+
+.consistency-info {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #16a085;
+  font-weight: bold;
+  text-align: center;
+}
+
+.consistency-info.strong {
+  color: #c0392b;
+}
+
+.consistency-info.eventual {
+  color: #27ae60;
+}

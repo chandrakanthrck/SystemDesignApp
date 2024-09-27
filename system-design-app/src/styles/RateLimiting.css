@@ -1,0 +1,113 @@
+/* styles/RateLimiting.css */
+
+.rate-limiting-container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.rate-limiting-header {
+  font-size: 34px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rate-limiting-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #34495e;
+  text-align: justify;
+}
+
+.rate-limiting-diagram {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.rate-limiting-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #e8f1f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section h2 {
+  font-size: 28px;
+  color: #1a73e8;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.rate-limiting-example {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rate-limiting-example h3 {
+  font-size: 24px;
+  color: #16a085;
+  margin-bottom: 10px;
+}
+
+.rate-limiting-example p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.rate-limiting-chart {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.rate-limiting-chart img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-button {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
+
+.rate-limiting-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #7f8c8d;
+}

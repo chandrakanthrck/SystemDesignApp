@@ -1,0 +1,118 @@
+/* styles/globalStyles.css */
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* A lighter gray for a soft background feel */
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions for a more dynamic feel */
+}
+
+h1, h2, h3 {
+    color: #007acc; /* A bright blue color to make headings pop */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0.75em;
+}
+
+h3 {
+    font-size: 1.75em;
+    margin-top: 1em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    color: #444; /* Darker text for improved readability */
+}
+
+a {
+    color: #2e86de;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth color change and underline for hover effect */
+}
+
+a:hover {
+    color: #0056a3; /* A darker shade to emphasize hover effect */
+    text-decoration: underline;
+}
+
+button {
+    font-family: inherit;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    background-color: #007acc; /* Button with primary blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth background and transform effects */
+}
+
+button:hover {
+    background-color: #0056a3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge to indicate hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slight compression to indicate button press */
+}
+
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px; /* Rounded corners for a softer image presentation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a modern touch */
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e8f0fe; /* Light blue background for block quotes */
+    border-left: 5px solid #007acc;
+    font-style: italic;
+    color: #333;
+}
+
+code {
+    background-color: #f1f1f1;
+    padding: 5px;
+    font-size: 0.95em;
+    border-radius: 4px;
+}
+
+pre {
+    background-color: #282c34; /* Darker background for code blocks */
+    padding: 15px;
+    border-radius: 5px;
+    color: #f8f8f2; /* Light text for better readability on dark background */
+    overflow-x: auto;
+    font-size: 0.9em;
+}
+
+/* Smooth transition effect for the entire application */
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}

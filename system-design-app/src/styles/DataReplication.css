@@ -1,0 +1,117 @@
+/* styles/DataReplication.css */
+
+.data-replication-container {
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.data-replication-header {
+  font-size: 34px;
+  font-weight: bold;
+  color: #2e4053;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.data-replication-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #34495e;
+  text-align: justify;
+}
+
+.data-replication-diagram {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.data-replication-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.interactive-section h2 {
+  font-size: 28px;
+  color: #17a2b8;
+  margin-bottom: 20px;
+}
+
+.replication-simulation-button {
+  padding: 14px 28px;
+  background-color: #17a2b8;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.replication-simulation-button:hover {
+  background-color: #138496;
+}
+
+.replication-types {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.replication-types h2 {
+  font-size: 28px;
+  color: #2980b9;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.replication-types p {
+  font-size: 16px;
+  color: #2c3e50;
+  text-align: justify;
+}
+
+.buttons-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.action-button {
+  padding: 14px 24px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
+
+.data-replication-footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #95a5a6;
+}

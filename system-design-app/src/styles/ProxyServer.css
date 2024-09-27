@@ -1,0 +1,113 @@
+/* styles/ProxyServer.css */
+
+.proxy-server-container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Verdana', sans-serif;
+}
+
+.proxy-server-header {
+  font-size: 36px;
+  font-weight: bold;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.proxy-server-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #2c3e50;
+  text-align: justify;
+}
+
+.proxy-server-diagram {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.proxy-server-diagram img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #eaf0f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-section h2 {
+  font-size: 28px;
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.proxy-server-example {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.proxy-server-example h3 {
+  font-size: 24px;
+  color: #16a085;
+  margin-bottom: 10px;
+}
+
+.proxy-server-example p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.proxy-server-diagram-chart {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.proxy-server-diagram-chart img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-button {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
+
+.proxy-server-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #7f8c8d;
+}
