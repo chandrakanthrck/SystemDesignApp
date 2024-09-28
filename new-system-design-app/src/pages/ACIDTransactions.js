@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './ACIDTransactions.css';  // Use a separate CSS file for specific concept styling.
+import '../styles/ACIDTransactions.css';  // Use a separate CSS file for specific concept styling.
 
 function ACIDTransactions() {
   // State for showing additional information

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './APIGateway.css';
+import '../styles/APIGateway.css';
 
 function APIGateway() {
   return (

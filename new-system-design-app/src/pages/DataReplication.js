@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DataReplication.css'; // Ensure this file path is correct
+import '../styles/DataReplication.css'; // Ensure this file path is correct
 
 function DataReplication() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './SQLvsNoSQL.css'; // Ensure the correct CSS file is imported
+import '../styles/SQLvsNoSQL.css'; // Ensure the correct CSS file is imported
 
 function SQLvsNoSQL() {
   return (

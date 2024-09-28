@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './MessageQueues.css'; // Ensure correct CSS import
+import '../styles/MessageQueues.css'; // Ensure correct CSS import
 
 function MessageQueues() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DataRedundancy.css';
+import '../styles/DataRedundancy.css';
 
 function DataRedundancy() {
   return (

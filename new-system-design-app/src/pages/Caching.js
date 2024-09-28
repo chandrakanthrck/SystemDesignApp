@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Caching.css';
+import '../styles/Caching.css';
 
 function Caching() {
   return (

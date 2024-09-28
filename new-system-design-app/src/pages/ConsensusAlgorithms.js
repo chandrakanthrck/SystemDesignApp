@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './ConsensusAlgorithms.css';
+import '../styles/ConsensusAlgorithms.css';
 
 function ConsensusAlgorithms() {
   return (

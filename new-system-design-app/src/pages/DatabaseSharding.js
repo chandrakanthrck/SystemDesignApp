@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DatabaseSharding.css';
+import '../styles/DatabaseSharding.css';
 
 function DatabaseSharding() {
   return (

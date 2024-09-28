@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Microservices.css'; // Ensure the correct CSS file is imported
+import '../styles/Microservices.css'; // Ensure the correct CSS file is imported
 
 function MicroservicesArchitecture() {
   return (

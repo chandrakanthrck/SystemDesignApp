@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DistributedCaching.css'; // Ensure correct CSS import
+import '../styles/DistributedCaching.css'; // Ensure correct CSS import
 
 function DistributedCaching() {
   return (

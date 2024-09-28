@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './BatchVsStreamProcessing.css';
+import '../styles/BatchVsStreamProcessing.css';
 
 function BatchVsStreamProcessing() {
   return (

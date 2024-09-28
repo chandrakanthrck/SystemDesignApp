@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './ProxyServer.css'; // Ensure the correct CSS file is imported
+import '../styles/ProxyServer.css'; // Ensure the correct CSS file is imported
 
 function ProxyServer() {
   return (

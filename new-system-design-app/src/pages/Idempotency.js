@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Idempotency.css'; // Ensure correct CSS import
+import '../styles/Idempotency.css'; // Ensure correct CSS import
 
 function Idempotency() {
   return (

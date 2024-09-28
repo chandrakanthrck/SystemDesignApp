@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './HeartBeat.css'; // Ensure correct CSS import
+import '../styles/HeartBeat.css'; // Ensure correct CSS import
 
 function HeartBeat() {
   return (

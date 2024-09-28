@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './LatencyVsThroughput.css'; // Ensure correct CSS import
+import '../styles/LatencyVsThroughput.css'; // Ensure correct CSS import
 
 function LatencyThroughput() {
   return (

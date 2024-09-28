@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Checksum.css'; // Updated to use Checksum-specific CSS file
+import '../styles/Checksum.css'; // Updated to use Checksum-specific CSS file
 
 function Checksum() {
   return (

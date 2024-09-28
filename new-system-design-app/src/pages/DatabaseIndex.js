@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DatabaseIndex.css';
+import '../styles/DatabaseIndex.css';
 
 function DatabaseIndex() {
   return (

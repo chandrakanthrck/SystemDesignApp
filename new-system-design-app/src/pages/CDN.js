@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './CDN.css';
+import '../styles/CDN.css';
 
 function CDN() {
   return (

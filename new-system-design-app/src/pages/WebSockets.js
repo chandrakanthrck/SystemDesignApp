@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './WebSockets.css'; // Ensure the correct CSS file is imported
+import '../styles/WebSockets.css'; // Ensure the correct CSS file is imported
 
 function WebSockets() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './CircuitBreaker.css';
+import '../styles/CircuitBreaker.css';
 
 function CircuitBreaker() {
   return (

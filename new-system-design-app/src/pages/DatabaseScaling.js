@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DatabaseScaling.css';
+import '../styles/DatabaseScaling.css';
 
 function DatabaseScaling() {
   return (

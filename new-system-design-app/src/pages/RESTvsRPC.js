@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './RESTvsRPC.css'; // Ensure the correct CSS file is imported
+import '../styles/RESTvsRPC.css'; // Ensure the correct CSS file is imported
 
 function RESTvsRPC() {
   return (

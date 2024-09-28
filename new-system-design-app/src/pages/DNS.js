@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DNS.css'; // Ensure correct CSS import
+import '../styles/DNS.css'; // Ensure correct CSS import
 
 function DNS() {
   return (

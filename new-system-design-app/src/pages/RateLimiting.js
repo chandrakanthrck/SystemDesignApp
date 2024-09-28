@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './RateLimiting.css'; // Ensure the correct CSS file is imported
+import '../styles/RateLimiting.css'; // Ensure the correct CSS file is imported
 
 function RateLimiting() {
   return (

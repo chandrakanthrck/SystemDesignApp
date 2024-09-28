@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './DistributedLocking.css'; // Ensure correct CSS import
+import '../styles/DistributedLocking.css'; // Ensure correct CSS import
 
 function DistributedLocking() {
   return (

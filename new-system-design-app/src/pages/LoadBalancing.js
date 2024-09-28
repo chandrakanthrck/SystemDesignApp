@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './LoadBalancing.css'; // Ensure correct CSS import
+import '../styles/LoadBalancing.css'; // Ensure correct CSS import
 
 function LoadBalancing() {
   return (

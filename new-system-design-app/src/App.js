@@ -1,13 +1,12 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar'; // Import the updated NavBar component
-import './App.css';
-import HomePage from './pages/HomePage';
-import ContentDeliveryNetwork from './pages/ContentDeliveryNetwork';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import './styles/App.css';
+
+import CDN from './pages/CDN';
 import Caching from './pages/Caching';
 import DistributedCaching from './pages/DistributedCaching';
-import LatencyThroughput from './pages/LatencyThroughput';
+import LatencyVsThroughput from './pages/LatencyVsThroughput';
 import CAPTheorem from './pages/CAPTheorem';
 import LoadBalancing from './pages/LoadBalancing';
 import ACIDTransactions from './pages/ACIDTransactions';
@@ -15,10 +14,10 @@ import SQLvsNoSQL from './pages/SQLvsNoSQL';
 import ConsistentHashing from './pages/ConsistentHashing';
 import DatabaseIndex from './pages/DatabaseIndex';
 import RateLimiting from './pages/RateLimiting';
-import MicroservicesArchitecture from './pages/MicroservicesArchitecture';
-import StrongEventualConsistency from './pages/StrongEventualConsistency';
+import Microservices from './pages/Microservices';
+import StrongVsEventualConsistency from './pages/StrongVsEventualConsistency';
 import RESTvsRPC from './pages/RESTvsRPC';
-import BatchStreamProcessing from './pages/BatchStreamProcessing';
+import BatchVsStreamProcessing from './pages/BatchVsStreamProcessing';
 import HeartBeat from './pages/HeartBeat';
 import CircuitBreaker from './pages/CircuitBreaker';
 import Idempotency from './pages/Idempotency';
@@ -27,7 +26,7 @@ import DataReplication from './pages/DataReplication';
 import DataRedundancy from './pages/DataRedundancy';
 import DatabaseSharding from './pages/DatabaseSharding';
 import ProxyServer from './pages/ProxyServer';
-import DomainNameSystem from './pages/DomainNameSystem';
+import DNS from './pages/DNS';
 import MessageQueues from './pages/MessageQueues';
 import WebSockets from './pages/WebSockets';
 import ConsensusAlgorithms from './pages/ConsensusAlgorithms';
@@ -37,46 +36,43 @@ import Checksum from './pages/Checksum';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <NavBar />
-        <div className="content">
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/cdn" component={ContentDeliveryNetwork} />
-            <Route path="/caching" component={Caching} />
-            <Route path="/distributed-caching" component={DistributedCaching} />
-            <Route path="/latency-throughput" component={LatencyThroughput} />
-            <Route path="/cap-theorem" component={CAPTheorem} />
-            <Route path="/load-balancing" component={LoadBalancing} />
-            <Route path="/acid-transactions" component={ACIDTransactions} />
-            <Route path="/sql-vs-nosql" component={SQLvsNoSQL} />
-            <Route path="/consistent-hashing" component={ConsistentHashing} />
-            <Route path="/database-index" component={DatabaseIndex} />
-            <Route path="/rate-limiting" component={RateLimiting} />
-            <Route path="/microservices" component={MicroservicesArchitecture} />
-            <Route path="/strong-eventual-consistency" component={StrongEventualConsistency} />
-            <Route path="/rest-vs-rpc" component={RESTvsRPC} />
-            <Route path="/batch-stream-processing" component={BatchStreamProcessing} />
-            <Route path="/heartbeat" component={HeartBeat} />
-            <Route path="/circuit-breaker" component={CircuitBreaker} />
-            <Route path="/idempotency" component={Idempotency} />
-            <Route path="/database-scaling" component={DatabaseScaling} />
-            <Route path="/data-replication" component={DataReplication} />
-            <Route path="/data-redundancy" component={DataRedundancy} />
-            <Route path="/database-sharding" component={DatabaseSharding} />
-            <Route path="/proxy-server" component={ProxyServer} />
-            <Route path="/dns" component={DomainNameSystem} />
-            <Route path="/message-queues" component={MessageQueues} />
-            <Route path="/websockets" component={WebSockets} />
-            <Route path="/consensus-algorithms" component={ConsensusAlgorithms} />
-            <Route path="/api-gateway" component={APIGateway} />
-            <Route path="/distributed-locking" component={DistributedLocking} />
-            <Route path="/checksum" component={Checksum} />
-          </Switch>
-        </div>
+    <div className="App">
+      <NavBar />
+      <div className="content">
+        <Routes>
+          <Route path="/cdn" element={<CDN />} />
+          <Route path="/caching" element={<Caching />} />
+          <Route path="/distributed-caching" element={<DistributedCaching />} />
+          <Route path="/latency-throughput" element={<LatencyVsThroughput />} />
+          <Route path="/cap-theorem" element={<CAPTheorem />} />
+          <Route path="/load-balancing" element={<LoadBalancing />} />
+          <Route path="/acid-transactions" element={<ACIDTransactions />} />
+          <Route path="/sql-vs-nosql" element={<SQLvsNoSQL />} />
+          <Route path="/consistent-hashing" element={<ConsistentHashing />} />
+          <Route path="/database-index" element={<DatabaseIndex />} />
+          <Route path="/rate-limiting" element={<RateLimiting />} />
+          <Route path="/microservices" element={<Microservices />} />
+          <Route path="/strong-eventual-consistency" element={<StrongVsEventualConsistency />} />
+          <Route path="/rest-vs-rpc" element={<RESTvsRPC />} />
+          <Route path="/batch-stream-processing" element={<BatchVsStreamProcessing />} />
+          <Route path="/heartbeat" element={<HeartBeat />} />
+          <Route path="/circuit-breaker" element={<CircuitBreaker />} />
+          <Route path="/idempotency" element={<Idempotency />} />
+          <Route path="/database-scaling" element={<DatabaseScaling />} />
+          <Route path="/data-replication" element={<DataReplication />} />
+          <Route path="/data-redundancy" element={<DataRedundancy />} />
+          <Route path="/database-sharding" element={<DatabaseSharding />} />
+          <Route path="/proxy-server" element={<ProxyServer />} />
+          <Route path="/dns" element={<DNS />} />
+          <Route path="/message-queues" element={<MessageQueues />} />
+          <Route path="/websockets" element={<WebSockets />} />
+          <Route path="/consensus-algorithms" element={<ConsensusAlgorithms />} />
+          <Route path="/api-gateway" element={<APIGateway />} />
+          <Route path="/distributed-locking" element={<DistributedLocking />} />
+          <Route path="/checksum" element={<Checksum />} />
+        </Routes>
       </div>
-    </Router>
+    </div>
   );
 }
 

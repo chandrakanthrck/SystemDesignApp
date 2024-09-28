@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './StrongVsEventualConsistency.css'; // Ensure the correct CSS file is imported
+import '../styles/StrongVsEventualConsistency.css'; // Ensure the correct CSS file is imported
 
 function StrongVsEventualConsistency() {
   return (
