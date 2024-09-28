@@ -1,10 +1,8 @@
-/* styles/DatabaseScaling.css */
-
 .scaling-container {
   padding: 50px;
   max-width: 1100px;
   margin: auto;
-  background-color: #f4f6f9;
+  background-color: #f4f6f9; /* Light background for a softer appearance */
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
@@ -60,12 +58,6 @@
 
 .interactive-section:hover {
   background-color: #f9fafb;
-}
-
-.interactive-section h2 {
-  font-size: 28px;
-  color: #16a085;
-  margin-bottom: 20px;
 }
 
 .scaling-simulation-button {

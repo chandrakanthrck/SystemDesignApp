@@ -1,13 +1,10 @@
-/* styles/DatabaseSharding.css */
-
 .sharding-container {
   padding: 50px;
   max-width: 1100px;
   margin: auto;
-  background-color: #f8fafc;
+  background-color: #f8fafc; /* Light background for a softer appearance */
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -61,12 +58,6 @@
 
 .interactive-section:hover {
   background-color: #f9fafb;
-}
-
-.interactive-section h2 {
-  font-size: 28px;
-  color: #e67e22;
-  margin-bottom: 20px;
 }
 
 .sharding-simulation-button {

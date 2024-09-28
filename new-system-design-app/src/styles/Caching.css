@@ -1,5 +1,3 @@
-/* styles/Caching.css */
-
 .caching-container {
   padding: 40px;
   max-width: 900px;
@@ -7,11 +5,12 @@
   background: #f7fafc;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .caching-container:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Add a slight lift effect */
 }
 
 .caching-title {
@@ -20,6 +19,11 @@
   font-weight: bold;
   margin-bottom: 25px;
   color: #2f855a;
+  transition: color 0.3s ease-in-out;
+}
+
+.caching-title:hover {
+  color: #276749; /* Add subtle color change on hover for better engagement */
 }
 
 .caching-content {
@@ -53,11 +57,12 @@
   background-color: #e6fffa;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .interactive-section:hover {
   background-color: #b2f5ea;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .interactive-heading {
@@ -82,6 +87,10 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+.interactive-button:active {
+  transform: translateY(1px); /* Button moves slightly down on click for feedback */
+}
+
 .caching-list {
   margin-top: 25px;
   list-style-type: disc;
@@ -96,4 +105,9 @@
   color: #4a5568;
   text-align: center;
   font-size: 1.1em;
+  transition: color 0.3s ease-in-out;
+}
+
+.caching-note:hover {
+  color: #2d3748; /* Slight color change on hover */
 }

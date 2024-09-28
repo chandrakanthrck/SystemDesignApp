@@ -1,13 +1,10 @@
-/* styles/DataRedundancy.css */
-
 .data-redundancy-container {
   padding: 50px;
   max-width: 1100px;
   margin: auto;
-  background-color: #f0f4f8;
+  background-color: #f0f4f8; /* Light background for a softer appearance */
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: 'Verdana', sans-serif;
   transition: box-shadow 0.3s ease-in-out;
 }
 

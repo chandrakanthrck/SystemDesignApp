@@ -1,10 +1,8 @@
-/* styles/HeartBeat.css */
-
 .heartbeat-container {
   padding: 50px;
   max-width: 1000px;
   margin: auto;
-  background-color: #f9f9f9;
+  background-color: #f9fafb;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Roboto', sans-serif;

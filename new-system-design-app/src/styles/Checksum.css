@@ -1,10 +1,8 @@
-/* styles/Checksum.css */
-
 .checksum-container {
   padding: 40px;
   max-width: 900px;
   margin: auto;
-  background: #f7fafc;  /* Changed to a light background for a softer appearance */
+  background: #f7fafc;  /* Light background for a softer appearance */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
