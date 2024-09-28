@@ -1,15 +1,32 @@
 import React from 'react';
-import './Concept.css';
+import './RateLimiting.css'; // Ensure the correct CSS file is imported
 
 function RateLimiting() {
   return (
-    <div className="concept">
-      <h2>Rate Limiting</h2>
-      <p>
+    <div className="rate-limiting-container">
+      <h2 className="rate-limiting-header">Rate Limiting</h2>
+      <p className="rate-limiting-description">
         Rate limiting controls the number of requests a user can make in a given timeframe, 
         protecting systems from overload, abuse, and attacks while ensuring fair usage among users.
       </p>
-      <img src="path/to/rate-limiting-diagram.png" alt="Rate Limiting Diagram" className="concept-image" />
+      <div className="rate-limiting-diagram">
+        <img src="path/to/rate-limiting-diagram.png" alt="Rate Limiting Diagram" className="concept-image" />
+      </div>
+      <div className="interactive-section">
+        <h2>Understanding Rate Limiting</h2>
+        <p>Rate limiting is essential for maintaining the health of APIs and web services, allowing administrators to control traffic.</p>
+      </div>
+      <div className="rate-limiting-example">
+        <h3>Example of Rate Limiting</h3>
+        <p>For instance, an API might limit users to 100 requests per hour to prevent abuse and ensure service stability.</p>
+      </div>
+      <div className="buttons-container">
+        <button className="action-button">Learn More About Rate Limiting</button>
+        <button className="action-button">Explore Rate Limiting Techniques</button>
+      </div>
+      <div className="rate-limiting-footer">
+        Implementing rate limiting helps improve security and manage resources effectively.
+      </div>
     </div>
   );
 }

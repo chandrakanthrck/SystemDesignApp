@@ -1,23 +1,64 @@
 .concept {
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  .concept h2 {
-    color: #333;
-  }
-  
-  .concept p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  .concept-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-  }
-  
+  margin: 20px;
+  padding: 20px; /* Slightly increased padding for more spacious layout */
+  border: 1px solid #ccc;
+  border-radius: 12px; /* Increased border radius for a softer appearance */
+  background-color: #ffffff; /* Changed to pure white for a cleaner look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for a card-like elevation effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.concept:hover {
+  transform: translateY(-5px); /* Creates a subtle lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepens the shadow on hover */
+}
+
+.concept h2 {
+  color: #2e86de; /* Changed to a brighter color to make headings pop */
+  margin-bottom: 15px; /* Added spacing below the heading for better separation */
+  font-size: 1.8rem; /* Slightly increased font size for prominence */
+}
+
+.concept p {
+  font-size: 1rem; /* Using relative units for better scaling */
+  line-height: 1.8; /* Increased line height for better readability */
+  color: #555; /* Softer black for reduced eye strain */
+}
+
+.concept-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px; /* Slightly increased margin for better separation from the text */
+  border-radius: 8px; /* Added a border radius to match the container for a consistent design */
+  transition: transform 0.3s ease; /* Added transition for a smooth effect */
+}
+
+.concept-image:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover to grab attention */
+}
+
+.button-container {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.learn-more-button {
+  background-color: #2e86de; /* Button color to match heading */
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for smoother interaction */
+}
+
+.learn-more-button:hover {
+  background-color: #1a5f9e; /* Darker blue for hover state */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.learn-more-button:active {
+  transform: translateY(0); /* Removes lift on click to simulate pressing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

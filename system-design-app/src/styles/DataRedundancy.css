@@ -8,6 +8,11 @@
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Verdana', sans-serif;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.data-redundancy-container:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .data-redundancy-header {
@@ -23,6 +28,7 @@
   line-height: 1.8;
   color: #34495e;
   text-align: justify;
+  margin-bottom: 25px;
 }
 
 .data-redundancy-diagram {
@@ -35,6 +41,12 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.data-redundancy-diagram img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .interactive-section {
@@ -44,6 +56,11 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.interactive-section:hover {
+  background-color: #f9fafb;
 }
 
 .interactive-section h2 {
@@ -54,17 +71,20 @@
 
 .redundancy-simulation-button {
   padding: 14px 28px;
+  margin: 10px;
   background-color: #16a085;
   color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
 .redundancy-simulation-button:hover {
   background-color: #12876c;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .redundancy-benefits {
@@ -91,7 +111,8 @@
 .buttons-container {
   margin-top: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
 }
 
 .action-button {
@@ -102,11 +123,13 @@
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
 .action-button:hover {
   background-color: #2a80b9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .data-redundancy-footer {

@@ -1,4 +1,4 @@
-/* styles/Navigation.css */
+/* styles/NavBar.css */
 
 .navigation {
     background-color: #2d3748; /* Dark background for contrast */
@@ -13,17 +13,17 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adding a slight shadow for emphasis */
   }
   
-  .navigation ul {
+.navigation ul {
     list-style-type: none;
     padding: 0;
     margin-top: 30px;
   }
   
-  .navigation li {
+.navigation li {
     margin: 15px 0;
   }
   
-  .navigation a {
+.navigation a {
     color: #e2e8f0; /* Lighter color for better readability against the dark background */
     text-decoration: none;
     font-weight: bold;
@@ -34,18 +34,18 @@
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   }
   
-  .navigation a:hover {
+.navigation a:hover {
     color: #f7fafc;
     background-color: #38b2ac; /* Adding a background color on hover */
     transform: translateX(5px); /* A slight movement to the right to indicate hover */
   }
   
-  .navigation a.active {
+.navigation a.active {
     background-color: #4a5568; /* Highlighting the active link */
     color: #f7fafc;
   }
   
-  .logo {
+.logo {
     color: #e2e8f0;
     font-size: 1.8em;
     font-weight: bold;
@@ -54,8 +54,7 @@
     transition: transform 0.3s ease-in-out;
   }
   
-  .logo:hover {
+.logo:hover {
     transform: scale(1.05);
     color: #38b2ac; /* Color change to emphasize hover effect */
   }
-  

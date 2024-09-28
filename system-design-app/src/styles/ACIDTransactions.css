@@ -7,6 +7,11 @@
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.acid-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .acid-title {
@@ -33,11 +38,13 @@
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .acid-diagram img:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .interactive-section {
@@ -45,6 +52,12 @@
   padding: 25px;
   background-color: #edf2f7;
   border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.interactive-section:hover {
+  background-color: #e2e8f0;
 }
 
 .interactive-heading {
@@ -60,12 +73,13 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
 .interactive-button:hover {
   background-color: #2c5282;
   transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .acid-list {
@@ -73,10 +87,32 @@
   list-style-type: disc;
   padding-left: 30px;
   color: #4a5568;
+  font-size: 1.1em;
 }
 
 .acid-note {
   margin-top: 30px;
   font-style: italic;
   color: #718096;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.acid-property {
+  margin: 20px 0;
+}
+
+.property-details {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  border-left: 5px solid #2e86de;
+  color: #2d3748;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.property-details:hover {
+  transform: translateX(10px);
 }

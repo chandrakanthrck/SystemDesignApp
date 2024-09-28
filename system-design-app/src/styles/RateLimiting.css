@@ -72,18 +72,6 @@
   color: #34495e;
 }
 
-.rate-limiting-chart {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.rate-limiting-chart img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .buttons-container {
   margin-top: 20px;
   display: flex;
