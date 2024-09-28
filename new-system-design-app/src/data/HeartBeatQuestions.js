@@ -1,0 +1,35 @@
+// src/data/HeartBeatQuestions.js
+const heartbeatQuestions = [
+    { question: "What is a heartbeat in distributed systems?", answer: "A mechanism used to check if nodes are still operational" },
+    { question: "How does a heartbeat signal work?", answer: "It sends periodic messages to verify if nodes are active" },
+    { question: "What happens if a node fails to send a heartbeat signal?", answer: "The node is considered down, and recovery actions are taken" },
+    { question: "Why are heartbeat mechanisms used?", answer: "To monitor the health of nodes in a distributed system" },
+    { question: "What is a typical interval for sending heartbeat signals?", answer: "Intervals can vary, but they are often a few seconds or minutes apart" },
+    { question: "What kind of issues can heartbeat mechanisms detect?", answer: "Node failures or communication breakdowns" },
+    { question: "What is a quorum in distributed systems?", answer: "A majority of nodes needed to agree on an operation, used to maintain consistency" },
+    { question: "How does heartbeat relate to fault tolerance?", answer: "It helps detect failures quickly to maintain system stability" },
+    { question: "What happens when a heartbeat is missed?", answer: "The system may trigger a failover or other recovery procedure" },
+    { question: "What is a leader election in distributed systems?", answer: "The process of selecting a leader node to coordinate activities" },
+    { question: "How can network partitioning affect heartbeat?", answer: "It may prevent nodes from receiving heartbeats, leading to false failure detection" },
+    { question: "What is a split-brain scenario?", answer: "A condition where nodes become isolated and act independently, causing inconsistencies" },
+    { question: "What is the difference between liveness and heartbeat?", answer: "Liveness ensures a node is active, while heartbeat checks the node's health periodically" },
+    { question: "How do heartbeat mechanisms improve reliability?", answer: "By providing early detection of issues and allowing corrective actions" },
+    { question: "What role does a watchdog timer play in heartbeat?", answer: "It monitors the heartbeat and resets the node if no signal is received" },
+    { question: "What are leader and follower nodes?", answer: "The leader coordinates activities, while followers execute tasks under its guidance" },
+    { question: "How does a distributed system recover from node failure?", answer: "Other nodes take over the responsibilities of the failed node, often detected by missing heartbeats" },
+    { question: "What is a failover?", answer: "The process of shifting responsibilities from a failed node to a standby node" },
+    { question: "How can heartbeat mechanisms help with load balancing?", answer: "By monitoring node health and rerouting tasks if a node is overloaded or down" },
+    { question: "What is a keep-alive message?", answer: "A type of heartbeat used to maintain an active connection between nodes" },
+    { question: "What is the difference between a heartbeat and a health check?", answer: "A heartbeat is a simple signal of presence, whereas a health check assesses the state of the node" },
+    { question: "How can a delay in heartbeat detection affect a system?", answer: "It can lead to delayed detection of node failure, impacting availability" },
+    { question: "What does 'graceful degradation' mean in distributed systems?", answer: "The system's ability to maintain limited functionality when some parts fail" },
+    { question: "What is a heartbeat interval?", answer: "The period between successive heartbeat signals sent by a node" },
+    { question: "Why are short heartbeat intervals not always better?", answer: "Frequent heartbeats can overload the network, affecting performance" },
+    { question: "How is a 'heartbeat timeout' determined?", answer: "Based on the expected time for nodes to respond, considering network latency" },
+    { question: "What can cause false positives in heartbeat detection?", answer: "Network congestion or temporary communication issues can cause missed heartbeats" },
+    { question: "How does Zookeeper use heartbeat mechanisms?", answer: "Zookeeper uses heartbeat to maintain a session between clients and servers" },
+    { question: "What is the relationship between heartbeat and leader election?", answer: "Missing heartbeats can trigger a new leader election if the leader is assumed to be down" },
+  ];
+  
+  export default heartbeatQuestions;
+  

@@ -1,97 +1,197 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/LoadBalancing.css'; // Ensure correct CSS import
+import loadBalancingQuestions from '../data/LoadBalancingQuestions'; // Import the questions from the separate file
 
 function LoadBalancing() {
+  // State for showing sections
+  const [activeSection, setActiveSection] = useState('diagram');
+
+  // Quiz state
+  const [questions, setQuestions] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const [quizFinished, setQuizFinished] = useState(false);
+
+  // Randomly select 10 questions for the quiz
+  useEffect(() => {
+    const selectedQuestions = [...loadBalancingQuestions]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 10);
+    setQuestions(selectedQuestions);
+  }, []);
+
+  const handleAnswer = (isCorrect) => {
+    setAnswers([...answers, isCorrect]);
+    if (currentQuestionIndex + 1 < questions.length) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setQuizFinished(true);
+    }
+  };
+
   return (
     <div className="lb-container">
-      {/* Animated Header */}
-      <motion.h2 
-        className="lb-header"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Load Balancing
-      </motion.h2>
-
-      {/* Animated Description */}
-      <motion.p 
-        className="lb-description"
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Load balancing is the process of distributing network traffic across multiple servers. 
-        It enhances the availability and reliability of applications by ensuring no single server 
-        becomes overwhelmed with too much traffic.
-      </motion.p>
-
-      {/* Animated Diagram */}
-      <motion.div 
-        className="lb-diagram"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.2 }}
-        whileHover={{ scale: 1.05 }}
-      >
-        <img src={`${process.env.PUBLIC_URL}/images/load-balancing-diagram.png`} alt="Load Balancing Diagram" className="concept-image" />
-      </motion.div>
-
-      {/* Interactive Section */}
-      <motion.div 
-        className="interactive-section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        <h2>Understanding Load Balancing</h2>
-        <p>Load balancing helps in managing the load effectively across servers, improving performance and reliability.</p>
-      </motion.div>
-
-      {/* Example Section */}
-      <motion.div 
-        className="lb-example"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 1 }}
-      >
-        <h3>Example of Load Balancing</h3>
-        <p>For instance, in a web application, a load balancer can distribute requests among multiple servers to ensure no single server gets overwhelmed.</p>
-      </motion.div>
-
-      {/* Types Section */}
-      <motion.div 
-        className="lb-types"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 1 }}
-      >
-        <h2>Types of Load Balancing</h2>
-        <p>Load balancing can be done using various algorithms such as Round Robin, Least Connections, or IP Hash.</p>
-      </motion.div>
-
-      {/* Action Buttons Section */}
-      <div className="buttons-container">
-        <motion.button 
-          className="action-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+      {/* Top Navigation Bar */}
+      <div className="top-bar">
+        <button
+          className={activeSection === 'diagram' ? 'active-button' : ''}
+          onClick={() => setActiveSection('diagram')}
         >
-          Learn More About Load Balancers
-        </motion.button>
-        <motion.button 
-          className="action-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          Diagram
+        </button>
+        <button
+          className={activeSection === 'content' ? 'active-button' : ''}
+          onClick={() => setActiveSection('content')}
         >
-          Explore Network Optimization Techniques
-        </motion.button>
+          Content
+        </button>
+        <button
+          className={activeSection === 'quiz' ? 'active-button' : ''}
+          onClick={() => setActiveSection('quiz')}
+        >
+          Quiz
+        </button>
+        <button
+          className={activeSection === 'resources' ? 'active-button' : ''}
+          onClick={() => setActiveSection('resources')}
+        >
+          Resources
+        </button>
       </div>
+
+      {/* Section Rendering */}
+      {activeSection === 'diagram' && (
+        <motion.div
+          className="lb-diagram"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/images/load-balancing-diagram.png`}
+            alt="Load Balancing Diagram"
+            className="concept-image"
+          />
+        </motion.div>
+      )}
+
+      {activeSection === 'content' && (
+        <motion.div
+          className="lb-content-section"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h2>Load Balancing</h2>
+          <p>
+            Imagine you are at a theme park, and there are multiple lines for the same roller coaster. A park attendant directs visitors 
+            to different lines based on how crowded they are, ensuring everyone gets on a ride quickly and no line becomes too long. 
+            This is analogous to **Load Balancing**, which distributes incoming traffic across multiple servers to optimize resource usage 
+            and avoid any single server from becoming a bottleneck.
+          </p>
+
+          <h3>How Load Balancing Works</h3>
+          <p>
+            Load balancing is like a traffic cop sitting in front of your server, directing requests to different servers that can handle the request.
+            It ensures that no single server bears too much load, thus enhancing **availability** and **reliability** of your applications.
+          </p>
+
+          <h3>Load Balancing Algorithms</h3>
+          <ul>
+            <li>
+              **Round Robin**: Requests are distributed in a circular manner across servers. This is simple but might not always distribute the load evenly.
+            </li>
+            <li>
+              **Least Connections**: The load balancer forwards the request to the server with the fewest active connections, which ensures better distribution.
+            </li>
+            <li>
+              **IP Hash**: The client’s IP address determines which server receives the request. This can help with server stickiness for certain clients.
+            </li>
+          </ul>
+
+          <h3>Benefits of Load Balancing</h3>
+          <ul>
+            <li>**Increased Availability**: By distributing requests, load balancers ensure that if one server fails, others can take over.</li>
+            <li>**Scalability**: Load balancers can help scale applications by adding more servers during high traffic periods.</li>
+            <li>**Performance Improvement**: Even distribution of traffic leads to better server utilization and faster response times.</li>
+          </ul>
+        </motion.div>
+      )}
+
+      {activeSection === 'quiz' && (
+        <div className="quiz-section">
+          <h3>Take the Quiz</h3>
+          {!quizFinished ? (
+            <div className="question-container">
+              <p>{questions[currentQuestionIndex]?.question}</p>
+              <motion.button
+                className="quiz-button"
+                onClick={() => handleAnswer(true)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Correct
+              </motion.button>
+              <motion.button
+                className="quiz-button"
+                onClick={() => handleAnswer(false)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Incorrect
+              </motion.button>
+            </div>
+          ) : (
+            <div className="quiz-results">
+              <h4>Quiz Finished!</h4>
+              <p>
+                You answered {answers.filter((a) => a).length} out of {questions.length} questions correctly!
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {activeSection === 'resources' && (
+        <div className="reference-links">
+          <h3>Learn More about Load Balancing</h3>
+          <ul>
+            <li>
+              <a
+                href="https://aws.amazon.com/elasticloadbalancing/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                AWS: Elastic Load Balancing - Understand how AWS ELB works and its types.
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.cloudflare.com/learning/cdn/glossary/what-is-load-balancing/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Cloudflare: What is Load Balancing? - Learn the basics and importance of load balancing.
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nginx.com/resources/glossary/load-balancing/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NGINX: Load Balancing Explained - Explore different load balancing strategies.
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
 
       {/* Footer Section */}
       <div className="lb-footer">
-        Load balancing is critical for maintaining optimal application performance and user satisfaction.
+        Load balancing is critical for maintaining optimal application performance, availability, and reliability in distributed systems.
       </div>
     </div>
   );

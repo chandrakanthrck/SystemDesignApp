@@ -1,0 +1,36 @@
+// src/data/LoadBalancingQuestions.js
+const loadBalancingQuestions = [
+    { question: "What is load balancing?", answer: "The process of distributing network traffic across multiple servers." },
+    { question: "Why is load balancing important?", answer: "It enhances availability and reliability by preventing server overload." },
+    { question: "What does a load balancer do if a server fails?", answer: "Redirects requests to other servers." },
+    { question: "What is Round Robin load balancing?", answer: "A method that distributes requests to servers in a circular order." },
+    { question: "What is the Least Connections algorithm?", answer: "An algorithm that sends traffic to the server with the fewest active connections." },
+    { question: "What is IP Hash in load balancing?", answer: "A method that assigns servers based on the client's IP address." },
+    { question: "How does load balancing improve scalability?", answer: "By adding more servers to handle increased traffic." },
+    { question: "What are some common load balancing strategies?", answer: "Round Robin, Least Connections, IP Hash." },
+    { question: "What is an Application Load Balancer (ALB)?", answer: "A load balancer that works at the application layer, distributing HTTP and HTTPS requests." },
+    { question: "How can load balancing improve website performance?", answer: "By distributing requests to prevent any single server from being overwhelmed." },
+    { question: "What is the difference between Layer 4 and Layer 7 load balancing?", answer: "Layer 4 works at the transport layer, while Layer 7 works at the application layer." },
+    { question: "What is failover in load balancing?", answer: "The ability to redirect traffic to healthy servers if one fails." },
+    { question: "What is the difference between active and passive load balancing?", answer: "Active monitors server health actively, while passive only redirects traffic when a failure occurs." },
+    { question: "How does DNS load balancing work?", answer: "By distributing traffic across servers based on domain name requests." },
+    { question: "What is a virtual IP address in load balancing?", answer: "A single IP address shared across multiple servers to balance the load." },
+    { question: "What are sticky sessions?", answer: "A method that ensures a user is always routed to the same server." },
+    { question: "Why is load balancing useful in cloud environments?", answer: "It helps distribute traffic dynamically to scale resources based on demand." },
+    { question: "What is horizontal scaling in relation to load balancing?", answer: "Adding more servers to distribute the load more effectively." },
+    { question: "Can load balancers detect server health?", answer: "Yes, they often include health checks to detect unresponsive servers." },
+    { question: "How does load balancing reduce latency?", answer: "By routing requests to the least busy or geographically closest server." },
+    { question: "What is a load balancer pool?", answer: "A group of servers that a load balancer distributes traffic to." },
+    { question: "What is the role of a reverse proxy in load balancing?", answer: "It helps distribute incoming client requests to backend servers." },
+    { question: "What is weighted load balancing?", answer: "A method where servers are assigned weights to control traffic distribution." },
+    { question: "What is a hybrid load balancer?", answer: "A load balancer that combines multiple load balancing algorithms." },
+    { question: "How does SSL termination work in load balancing?", answer: "The load balancer handles SSL decryption, reducing the load on backend servers." },
+    { question: "What is a cloud-native load balancer?", answer: "A load balancer specifically designed to work in cloud infrastructure environments." },
+    { question: "Why is session persistence important?", answer: "It ensures a consistent experience by directing user requests to the same server." },
+    { question: "What happens during load balancer failover?", answer: "Traffic is automatically redirected to functioning servers to maintain availability." },
+    { question: "What are health checks in load balancing?", answer: "Tests performed to determine if backend servers are capable of handling requests." },
+    { question: "How does load balancing enhance fault tolerance?", answer: "By distributing traffic and rerouting it if any server fails, ensuring high availability." },
+  ];
+  
+  export default loadBalancingQuestions;
+  

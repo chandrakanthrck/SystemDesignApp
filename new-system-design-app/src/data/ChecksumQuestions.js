@@ -1,0 +1,37 @@
+// src/data/ChecksumQuestions.js
+const checksumQuestions = [
+    { question: "What is a checksum?", answer: "A small-sized datum derived from a larger data set to detect errors" },
+    { question: "What is the primary purpose of a checksum?", answer: "To ensure data integrity during transmission or storage" },
+    { question: "How does a checksum detect errors?", answer: "By comparing the calculated checksum value at the sender and receiver ends" },
+    { question: "Where are checksums commonly used?", answer: "In networking protocols to verify packet integrity" },
+    { question: "Can checksums detect intentional alterations?", answer: "No, checksums are effective in detecting accidental errors, not intentional attacks" },
+    { question: "How is a checksum calculated?", answer: "By applying a mathematical function to a data set to produce a small value" },
+    { question: "What type of errors can checksums detect?", answer: "Accidental changes such as bit flips during data transmission" },
+    { question: "What is an example of a checksum algorithm?", answer: "CRC (Cyclic Redundancy Check)" },
+    { question: "How does a checksum ensure data integrity?", answer: "It ensures that the data received matches the original data sent" },
+    { question: "What happens if a checksum mismatch is detected?", answer: "The data is considered corrupted or altered during transmission" },
+    { question: "Are checksums sufficient for security?", answer: "No, checksums are not secure enough against intentional attacks; cryptographic hashes are better" },
+    { question: "What is the difference between a checksum and a hash function?", answer: "A checksum is designed for error detection, while a hash function is used for data integrity and cryptographic purposes" },
+    { question: "Can checksums correct errors?", answer: "No, they can only detect errors, not correct them" },
+    { question: "How do checksums help in networking?", answer: "They verify that data packets are received without errors" },
+    { question: "Why are checksums used in file downloads?", answer: "To ensure the file has not been corrupted during download" },
+    { question: "What is the main limitation of checksums?", answer: "They are vulnerable to intentional modifications" },
+    { question: "Is a checksum calculation computationally expensive?", answer: "No, checksums are usually computationally inexpensive" },
+    { question: "Can checksums be used to verify large data sets?", answer: "Yes, they can verify data integrity for large files and data sets" },
+    { question: "What is an example of a file format that uses checksums?", answer: "ZIP files use checksums to verify the integrity of compressed data" },
+    { question: "What is a parity bit in relation to checksums?", answer: "A parity bit is a simple form of a checksum for error detection in individual bytes" },
+    { question: "How does a checksum differ from an MD5 hash?", answer: "MD5 is a cryptographic hash function, while a checksum is mainly used for detecting transmission errors" },
+    { question: "What role do checksums play in RAID systems?", answer: "They help ensure data integrity across multiple disks" },
+    { question: "Can a checksum detect multiple bit errors?", answer: "It depends on the checksum algorithm; simple checksums may not detect multiple bit errors" },
+    { question: "What is an XOR checksum?", answer: "A checksum calculated by applying XOR to all the bytes of data" },
+    { question: "How does TCP/IP use checksums?", answer: "TCP/IP uses checksums to verify the integrity of data packets" },
+    { question: "What happens if a TCP packet fails the checksum verification?", answer: "The packet is discarded and may be retransmitted" },
+    { question: "Which checksum is often used for Ethernet frames?", answer: "CRC (Cyclic Redundancy Check)" },
+    { question: "What is a Fletcher checksum?", answer: "A checksum that sums data in a specific way to detect errors" },
+    { question: "Can checksums be used to verify software updates?", answer: "Yes, to ensure the update file has not been corrupted" },
+    { question: "Why are checksums important in financial transactions?", answer: "To ensure data integrity in the transmission of sensitive information" },
+    { question: "What is a good alternative to checksums for better security?", answer: "Cryptographic hash functions like SHA-256" },
+  ];
+  
+  export default checksumQuestions;
+  

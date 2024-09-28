@@ -1,0 +1,36 @@
+// src/data/WebSocketsQuestions.js
+const webSocketsQuestions = [
+    { question: "What is a WebSocket?", answer: "A communication protocol providing full-duplex communication over a single TCP connection." },
+    { question: "How do WebSockets differ from HTTP?", answer: "WebSockets provide a persistent connection, whereas HTTP is stateless and request-response-based." },
+    { question: "What type of communication do WebSockets enable?", answer: "Full-duplex communication, meaning both client and server can send data at the same time." },
+    { question: "Which layer of the OSI model do WebSockets operate on?", answer: "The application layer." },
+    { question: "What is an example use case for WebSockets?", answer: "Real-time chat applications, online gaming, and stock market feeds." },
+    { question: "How does WebSocket start its connection?", answer: "It starts as an HTTP connection and then upgrades to a WebSocket connection." },
+    { question: "What is the typical WebSocket URL scheme?", answer: "ws:// for unsecured and wss:// for secured connections." },
+    { question: "What is the main advantage of WebSockets?", answer: "Low latency and real-time bi-directional communication." },
+    { question: "What is the role of a WebSocket server?", answer: "To maintain the connection and facilitate communication with clients." },
+    { question: "Can WebSocket connections be used for broadcasting?", answer: "Yes, WebSockets can broadcast messages to multiple connected clients." },
+    { question: "How is data framed in WebSockets?", answer: "Data is framed in messages, which are structured to indicate the start and end." },
+    { question: "What does it mean for a WebSocket connection to be 'persistent'?", answer: "The connection remains open, unlike HTTP connections that close after each request." },
+    { question: "Is WebSocket communication synchronous or asynchronous?", answer: "Asynchronous, as data can be sent and received independently." },
+    { question: "What is the significance of the 'Upgrade' header in WebSocket?", answer: "It is used to switch an HTTP connection to a WebSocket connection." },
+    { question: "What port does WebSocket typically use?", answer: "Port 80 for ws:// and port 443 for wss://." },
+    { question: "How do WebSockets handle real-time updates?", answer: "By maintaining an open channel through which updates are pushed as they occur." },
+    { question: "How is security managed in WebSockets?", answer: "Through TLS encryption with wss:// for secure connections." },
+    { question: "Can WebSockets be used with firewalls?", answer: "Yes, but they may require specific configurations to pass through firewalls." },
+    { question: "What happens if a WebSocket connection is closed unexpectedly?", answer: "The client or server can attempt to reconnect, often using a reconnection strategy." },
+    { question: "What is the handshake process in WebSocket?", answer: "It is the initial request-response that upgrades an HTTP connection to a WebSocket." },
+    { question: "What kind of applications benefit most from WebSockets?", answer: "Real-time applications like chat, gaming, and financial tickers." },
+    { question: "Do WebSockets support backpressure?", answer: "Yes, they provide mechanisms to handle and regulate data flow." },
+    { question: "What kind of message formats do WebSockets support?", answer: "They support text and binary message formats." },
+    { question: "How do WebSockets compare to polling?", answer: "WebSockets are more efficient as they keep the connection open instead of repeatedly asking for updates." },
+    { question: "What happens during the 'close handshake' in WebSockets?", answer: "Both client and server send a close frame to terminate the connection cleanly." },
+    { question: "How does a client initiate a WebSocket connection?", answer: "By sending an HTTP request with the 'Upgrade' header to establish the connection." },
+    { question: "Can WebSockets be used with mobile applications?", answer: "Yes, they are suitable for any application that requires real-time data, including mobile apps." },
+    { question: "What is a fallback mechanism for WebSockets?", answer: "Techniques like HTTP polling or Server-Sent Events can be used if WebSockets are unavailable." },
+    { question: "Can WebSockets handle multiple messages concurrently?", answer: "Yes, the protocol allows multiple messages to be in transit simultaneously." },
+    { question: "What is the difference between ws:// and wss://?", answer: "ws:// is unsecured, while wss:// uses TLS to secure the communication." },
+  ];
+  
+  export default webSocketsQuestions;
+  

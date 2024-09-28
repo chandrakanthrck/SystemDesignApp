@@ -1,0 +1,36 @@
+// src/data/RateLimitingQuestions.js
+const rateLimitingQuestions = [
+    { question: "What is rate limiting?", answer: "A technique used to control the number of requests a user can make in a specific timeframe." },
+    { question: "Why is rate limiting important?", answer: "It helps prevent system overload, abuse, and ensures fair usage among all users." },
+    { question: "How does rate limiting protect APIs?", answer: "By limiting the number of requests, it prevents overuse and potential denial-of-service attacks." },
+    { question: "What is a common method to implement rate limiting?", answer: "The token bucket algorithm is a popular method for implementing rate limiting." },
+    { question: "How can rate limiting help improve security?", answer: "It reduces the risk of abuse by preventing bots or attackers from sending too many requests." },
+    { question: "What is the purpose of rate limiting for APIs?", answer: "To ensure service stability and quality by managing the number of requests from clients." },
+    { question: "What is burst rate limiting?", answer: "Allowing more requests in a short time period, followed by enforcing limits." },
+    { question: "How does the token bucket algorithm work?", answer: "Tokens are added to a bucket at a constant rate, and requests are only processed if tokens are available." },
+    { question: "What is a practical example of rate limiting?", answer: "Limiting a user to 100 requests per hour to prevent abuse." },
+    { question: "Can rate limiting be used to enhance the quality of service?", answer: "Yes, it ensures no single user degrades the performance for others." },
+    { question: "What is the difference between hard and soft rate limiting?", answer: "Hard limits enforce strict caps, while soft limits may allow slight overages occasionally." },
+    { question: "How can rate limiting help with managing API quotas?", answer: "By enforcing request limits, it ensures users stay within allocated quotas." },
+    { question: "What is throttling in the context of rate limiting?", answer: "Throttling refers to reducing the number of requests allowed after a threshold is reached." },
+    { question: "How do rate limits help prevent denial-of-service attacks?", answer: "By limiting the number of requests, rate limiting reduces the likelihood of overwhelming the server." },
+    { question: "What happens when a rate limit is exceeded?", answer: "A 429 Too Many Requests HTTP response code is typically returned to the client." },
+    { question: "What is the leaky bucket algorithm?", answer: "An algorithm that allows requests to be processed at a steady rate, preventing bursts." },
+    { question: "What type of rate limiting can be used to manage network traffic?", answer: "Network rate limiting, which restricts data flow to ensure stability and prevent congestion." },
+    { question: "How does rate limiting affect user experience?", answer: "It can prevent overwhelming servers but may also limit users' ability to send multiple requests." },
+    { question: "Can rate limiting be adjusted dynamically?", answer: "Yes, limits can be adjusted based on current server load or user status." },
+    { question: "What are the two main types of rate limits?", answer: "User-based rate limits and IP-based rate limits." },
+    { question: "How does IP-based rate limiting work?", answer: "It restricts the number of requests based on the client's IP address." },
+    { question: "What is user-based rate limiting?", answer: "It restricts the number of requests a specific user can make, often using an API key." },
+    { question: "How does rate limiting enhance scalability?", answer: "By ensuring no single user or IP consumes excessive resources, which helps maintain performance for all users." },
+    { question: "What are API quotas?", answer: "Limits set on the total number of API calls a user can make within a specific period." },
+    { question: "What are the consequences of not implementing rate limiting?", answer: "It can lead to system overload, poor user experience, and vulnerability to denial-of-service attacks." },
+    { question: "How does a distributed rate limiter work?", answer: "It ensures consistent rate limiting across multiple servers in a distributed environment." },
+    { question: "What is an HTTP response code 429?", answer: "It indicates that the user has sent too many requests in a given timeframe." },
+    { question: "What role do quotas play in rate limiting?", answer: "Quotas are used to define the maximum number of requests a user is allowed to make." },
+    { question: "How does rate limiting support billing in APIs?", answer: "By controlling the number of requests, it helps manage usage and billing for paid API services." },
+    { question: "Can rate limits be different for different types of users?", answer: "Yes, rate limits can be customized based on user tier, such as free users having stricter limits than premium users." },
+  ];
+  
+  export default rateLimitingQuestions;
+  

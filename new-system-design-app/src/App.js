@@ -33,6 +33,7 @@ import ConsensusAlgorithms from './pages/ConsensusAlgorithms';
 import APIGateway from './pages/APIGateway';
 import DistributedLocking from './pages/DistributedLocking';
 import Checksum from './pages/Checksum';
+import Quiz from './pages/Quiz'; // Import the new Quiz component
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
           <Route path="/api-gateway" element={<APIGateway />} />
           <Route path="/distributed-locking" element={<DistributedLocking />} />
           <Route path="/checksum" element={<Checksum />} />
+          <Route path="/quiz/:topic" element={<Quiz />} /> {/* Quiz route for specific topics */}
         </Routes>
       </div>
     </div>

@@ -1,0 +1,36 @@
+// src/data/DNSQuestions.js
+const dnsQuestions = [
+    { question: "What is DNS?", answer: "A system that translates domain names to IP addresses" },
+    { question: "Why is DNS important?", answer: "It enables users to access websites without remembering complex IP addresses" },
+    { question: "What does DNS stand for?", answer: "Domain Name System" },
+    { question: "What is an IP address?", answer: "A numeric address that identifies a device on the internet" },
+    { question: "What happens during a DNS lookup?", answer: "The DNS server translates a domain name into its corresponding IP address" },
+    { question: "What is the role of a DNS resolver?", answer: "It acts as an intermediary between the user and DNS servers to resolve domain names" },
+    { question: "What is a root server in DNS?", answer: "A server that directs queries to the appropriate top-level domain (TLD) server" },
+    { question: "What is a TLD in DNS?", answer: "Top-Level Domain, such as .com, .org, or .net" },
+    { question: "What is DNS caching?", answer: "Storing DNS query results locally to reduce lookup times for repeated requests" },
+    { question: "What is the purpose of DNS propagation?", answer: "The process of updating DNS records across all DNS servers worldwide" },
+    { question: "What is an authoritative DNS server?", answer: "A server that holds the definitive records for a domain" },
+    { question: "How does DNS help with load balancing?", answer: "By distributing incoming traffic across multiple IP addresses to balance the load" },
+    { question: "What is a reverse DNS lookup?", answer: "Determining the domain name associated with an IP address" },
+    { question: "What is an A record in DNS?", answer: "An address record that maps a domain to an IPv4 address" },
+    { question: "What is a CNAME record in DNS?", answer: "A Canonical Name record that maps an alias to a true domain name" },
+    { question: "What is a DNS query?", answer: "A request made to a DNS server to resolve a domain name to an IP address" },
+    { question: "What happens if a DNS server fails?", answer: "Another DNS server in the hierarchy will try to resolve the request" },
+    { question: "What is DNS spoofing?", answer: "A security attack where incorrect DNS information is inserted into a DNS resolver's cache" },
+    { question: "What are MX records in DNS?", answer: "Mail Exchange records that specify the mail servers responsible for receiving emails for a domain" },
+    { question: "What does TTL stand for in DNS?", answer: "Time to Live, which determines how long a DNS record is cached" },
+    { question: "How does a recursive DNS resolver work?", answer: "It performs multiple queries to resolve a domain name completely" },
+    { question: "What is DNSSEC?", answer: "DNS Security Extensions, which add security to DNS by verifying the authenticity of data" },
+    { question: "What role does DNS play in the internet?", answer: "It acts like a phonebook for the internet, mapping domain names to IP addresses" },
+    { question: "What is a DNS zone?", answer: "A portion of the domain namespace managed by a specific organization or administrator" },
+    { question: "How can DNS improve website performance?", answer: "By caching DNS records to reduce lookup times for frequently accessed domains" },
+    { question: "What is the difference between an authoritative and non-authoritative DNS response?", answer: "An authoritative response comes directly from the DNS server responsible for the domain, while a non-authoritative response comes from a cache" },
+    { question: "What is DNS over HTTPS (DoH)?", answer: "A protocol for performing DNS queries securely over HTTPS" },
+    { question: "How does DNS load balancing work?", answer: "It distributes queries across multiple servers to balance the load and prevent any single server from being overwhelmed" },
+    { question: "What is a subdomain?", answer: "A part of a domain used to organize different sections of a website, such as blog.example.com" },
+    { question: "Why might DNS propagation take time?", answer: "Because the updated records need to spread to all DNS servers worldwide, which can take up to 48 hours" },
+  ];
+  
+  export default dnsQuestions;
+  

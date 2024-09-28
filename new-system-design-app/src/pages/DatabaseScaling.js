@@ -1,113 +1,150 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../styles/DatabaseScaling.css';
+import '../styles/DatabaseScaling.css'; // Importing the specific CSS file
+import databaseScalingQuestions from '../data/DatabaseScalingQuestions'; // Import questions from the separate file
 
 function DatabaseScaling() {
+  // State for showing sections
+  const [activeSection, setActiveSection] = useState('diagram');
+  
+  // Quiz state
+  const [questions, setQuestions] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const [quizFinished, setQuizFinished] = useState(false);
+
+  // Randomly select 10 questions for the quiz
+  useEffect(() => {
+    const selectedQuestions = [...databaseScalingQuestions]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 10);
+    setQuestions(selectedQuestions);
+  }, []);
+
+  const handleAnswer = (answer) => {
+    setAnswers([...answers, answer]);
+    if (currentQuestionIndex + 1 < questions.length) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setQuizFinished(true);
+    }
+  };
+
   return (
     <div className="scaling-container">
-      {/* Animated Header */}
-      <motion.h2 
-        className="scaling-header"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Database Scaling
-      </motion.h2>
-
-      {/* Animated Description */}
-      <motion.p 
-        className="scaling-description"
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Database scaling refers to improving the database's capacity to handle increasing workloads. There are two common 
-        approaches to scaling databases: 
-      </motion.p>
-
-      <motion.ul 
-        className="scaling-description"
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        <li>Vertical Scaling: Adding more power (CPU, RAM, etc.) to an existing server.</li>
-        <li>Horizontal Scaling: Adding more servers to distribute the load.</li>
-      </motion.ul>
-
-      {/* Animated Diagram */}
-      <motion.div 
-        className="scaling-diagram"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.2 }}
-        whileHover={{ scale: 1.05 }}
-      >
-        <img src={`${process.env.PUBLIC_URL}/images/database-scaling-diagram.png`} alt="Database Scaling Diagram" className="concept-image" />
-      </motion.div>
-
-      {/* Interactive Section */}
-      <motion.div 
-        className="interactive-section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        <h2>Interactive Scaling Simulation</h2>
-        <motion.button 
-          className="scaling-simulation-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+      {/* Top Navigation Bar */}
+      <div className="top-bar">
+        <button 
+          className={activeSection === 'diagram' ? 'active' : ''} 
+          onClick={() => setActiveSection('diagram')}
         >
-          Simulate Vertical Scaling
-        </motion.button>
-        <motion.button 
-          className="scaling-simulation-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          Diagram
+        </button>
+        <button 
+          className={activeSection === 'content' ? 'active' : ''} 
+          onClick={() => setActiveSection('content')}
         >
-          Simulate Horizontal Scaling
-        </motion.button>
-      </motion.div>
-
-      {/* Scaling Types Section */}
-      <motion.div 
-        className="scaling-types-section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 1 }}
-      >
-        <h3>Scaling Types Explained</h3>
-        <p>
-          Vertical scaling is often easier to implement as it requires upgrading the existing server, but it is limited by the 
-          capacity of a single machine. Horizontal scaling, on the other hand, allows for virtually limitless scaling by 
-          adding more machines to share the load, which is more effective for distributed applications.
-        </p>
-      </motion.div>
-
-      {/* Action Buttons Section */}
-      <div className="scaling-buttons-container">
-        <motion.button 
-          className="scaling-action-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          Content
+        </button>
+        <button 
+          className={activeSection === 'quiz' ? 'active' : ''} 
+          onClick={() => setActiveSection('quiz')}
         >
-          Learn More About Vertical Scaling
-        </motion.button>
-        <motion.button 
-          className="scaling-action-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          Quiz
+        </button>
+        <button 
+          className={activeSection === 'resources' ? 'active' : ''} 
+          onClick={() => setActiveSection('resources')}
         >
-          Learn More About Horizontal Scaling
-        </motion.button>
+          Resources
+        </button>
       </div>
 
-      {/* Footer Section */}
-      <div className="scaling-footer">
-        Scaling databases effectively ensures that your application remains performant, regardless of growth in data or user traffic.
-      </div>
+      {/* Section Rendering */}
+      {activeSection === 'diagram' && (
+        <motion.div
+          className="scaling-diagram"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/images/database-scaling-diagram.png`}
+            alt="Database Scaling Diagram"
+            className="concept-image"
+          />
+        </motion.div>
+      )}
+
+      {activeSection === 'content' && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h2>Database Scaling</h2>
+          <p>
+            <strong>Database scaling</strong> refers to increasing the capacity of a database to handle larger amounts of data and more queries 
+            efficiently. There are two primary types of scaling: vertical and horizontal.
+          </p>
+          <h3>Real-World Analogy</h3>
+          <p>
+            Imagine you own a bakery. Initially, when you start getting more orders, you decide to buy a bigger oven to bake more cakes. 
+            This is similar to <strong>vertical scaling</strong>, where you upgrade your existing resources. However, at some point, no matter how big 
+            your oven is, it can't keep up with the demand. So, you decide to open more branches of the bakery across the city. 
+            This is like <strong>horizontal scaling</strong>, where you add more resources to handle growing demand.
+          </p>
+          <h3>Vertical vs Horizontal Scaling</h3>
+          <ul>
+            <li><strong>Vertical Scaling:</strong> Adding more power (CPU, RAM, etc.) to an existing server. It's simple but limited by the physical capacity of a single machine.</li>
+            <li><strong>Horizontal Scaling:</strong> Adding more servers to distribute the load. It's more complex but provides limitless scalability, ideal for distributed systems.</li>
+          </ul>
+        </motion.div>
+      )}
+
+      {activeSection === 'quiz' && (
+        <div className="quiz-section">
+          <h3>Take the Quiz</h3>
+          {!quizFinished ? (
+            <div className="question-container">
+              <p>{questions[currentQuestionIndex]?.question}</p>
+              <motion.button
+                className="quiz-button"
+                onClick={() => handleAnswer('Correct')}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Correct
+              </motion.button>
+              <motion.button
+                className="quiz-button"
+                onClick={() => handleAnswer('Incorrect')}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Incorrect
+              </motion.button>
+            </div>
+          ) : (
+            <div className="quiz-results">
+              <h4>Quiz Finished!</h4>
+              <p>You answered {answers.filter(a => a === 'Correct').length} out of {questions.length} questions correctly!</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {activeSection === 'resources' && (
+        <div className="reference-links">
+          <h3>Learn More about Database Scaling</h3>
+          <ul>
+            <li><a href="https://aws.amazon.com/nosql/database-scaling/" target="_blank" rel="noopener noreferrer">AWS: Database Scaling</a></li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/vertical-and-horizontal-scaling" target="_blank" rel="noopener noreferrer">DigitalOcean: Vertical and Horizontal Scaling</a></li>
+            <li><a href="https://www.geeksforgeeks.org/vertical-and-horizontal-scaling-in-databases/" target="_blank" rel="noopener noreferrer">GeeksforGeeks: Vertical and Horizontal Scaling</a></li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

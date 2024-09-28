@@ -1,75 +1,137 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/BatchVsStreamProcessing.css';
+import batchVsStreamQuestions from '../data/BatchVsStreamQuestions'; // Import questions from the separate file
 
 function BatchVsStreamProcessing() {
+  // State for showing additional sections
+  const [activeSection, setActiveSection] = useState('content');
+
+  // Quiz state
+  const [questions, setQuestions] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const [quizFinished, setQuizFinished] = useState(false);
+
+  // Randomly select 10 questions for the quiz
+  useEffect(() => {
+    const selectedQuestions = [...batchVsStreamQuestions]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 10);
+    setQuestions(selectedQuestions);
+  }, []);
+
+  const handleAnswer = (answer) => {
+    setAnswers([...answers, answer]);
+    if (currentQuestionIndex + 1 < questions.length) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setQuizFinished(true);
+    }
+  };
+
   return (
     <div className="batch-stream-container">
-      <motion.h2
-        className="batch-stream-title"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Batch Processing vs Stream Processing
-      </motion.h2>
+      {/* Top Navigation Bar */}
+      <div className="top-bar">
+        <button onClick={() => setActiveSection('diagram')}>Diagram</button>
+        <button onClick={() => setActiveSection('content')}>Content</button>
+        <button onClick={() => setActiveSection('quiz')}>Quiz</button>
+        <button onClick={() => setActiveSection('resources')}>Resources</button>
+      </div>
 
-      <motion.p
-        className="batch-stream-content"
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Batch processing involves processing large volumes of data at scheduled intervals, whereas stream processing allows for continuous 
-        data processing in real-time. Stream processing is useful for real-time analytics, such as fraud detection, while batch processing 
-        is better suited for scenarios like large-scale data aggregation or payroll systems.
-      </motion.p>
-
-      <motion.div
-        className="batch-stream-diagram"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.2 }}
-        whileHover={{ scale: 1.05 }}
-      >
-        <img src={`${process.env.PUBLIC_URL}/images/batch-vs-stream-diagram.png`} alt="Batch vs Stream Processing Diagram" />
-      </motion.div>
-
-      <motion.div
-        className="interactive-section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        <h3 className="interactive-heading">Explore More</h3>
-        <motion.button
-          className="interactive-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+      {/* Section Rendering */}
+      {activeSection === 'diagram' && (
+        <motion.div
+          className="batch-stream-diagram"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+          whileHover={{ scale: 1.05 }}
         >
-          Compare Real-Time Examples
-        </motion.button>
-      </motion.div>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/batch-vs-stream-diagram.png`}
+            alt="Batch vs Stream Processing Diagram"
+            className="concept-image"
+          />
+        </motion.div>
+      )}
 
-      <motion.ul
-        className="batch-stream-list"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 1 }}
-      >
-        <li>Batch processing deals with large, static datasets processed in bulk at regular intervals.</li>
-        <li>Stream processing involves handling data on the fly, suitable for low-latency applications.</li>
-        <li>Batch processing is often easier to implement but lacks the responsiveness of stream processing.</li>
-      </motion.ul>
+      {activeSection === 'content' && (
+        <motion.div
+          className="batch-stream-content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h2>Batch Processing vs Stream Processing</h2>
+          <p>
+            <strong>Batch Processing</strong> involves processing large volumes of data at scheduled intervals, much like gathering laundry over the week and washing it all at once. It’s efficient for large datasets, but it doesn’t provide immediate feedback.
+          </p>
+          <p>
+            In contrast, <strong>Stream Processing</strong> handles data in real-time, like washing each clothing item as it becomes dirty, immediately. This is crucial when real-time data is needed, such as fraud detection in banking.
+          </p>
+          <h3>Real-World Analogies</h3>
+          <p>
+            Imagine you're working in a factory. **Batch Processing** is like collecting all manufactured parts throughout the day and doing quality checks in one go at the end of the day. **Stream Processing**, on the other hand, is like inspecting each part as soon as it's made, ensuring issues are caught instantly.
+          </p>
+          <h3>Key Differences</h3>
+          <ul>
+            <li>
+              <strong>Latency:</strong> Batch processing has higher latency since it waits until enough data is collected, while stream processing provides low latency with immediate processing.
+            </li>
+            <li>
+              <strong>Complexity:</strong> Stream processing is more complex to implement due to its need for continuous data handling, whereas batch processing is simpler as it processes data in bulk.
+            </li>
+            <li>
+              <strong>Use Cases:</strong> Stream processing is ideal for applications like real-time analytics, stock trading, and fraud detection. Batch processing is best suited for use cases like payroll processing, reporting, and training machine learning models.
+            </li>
+          </ul>
+        </motion.div>
+      )}
 
-      <motion.p
-        className="batch-stream-note"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-      >
-        Note: Choosing between batch and stream processing depends on the use case, available resources, and the need for real-time insights.
-      </motion.p>
+      {activeSection === 'quiz' && (
+        <div className="quiz-section">
+          <h3>Take the Quiz</h3>
+          {!quizFinished ? (
+            <div className="question-container">
+              <p>{questions[currentQuestionIndex]?.question}</p>
+              <motion.button
+                className="quiz-button"
+                onClick={() => handleAnswer('Correct')}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Correct
+              </motion.button>
+              <motion.button
+                className="quiz-button"
+                onClick={() => handleAnswer('Incorrect')}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Incorrect
+              </motion.button>
+            </div>
+          ) : (
+            <div className="quiz-results">
+              <h4>Quiz Finished!</h4>
+              <p>You answered {answers.filter(a => a === 'Correct').length} out of {questions.length} questions correctly!</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {activeSection === 'resources' && (
+        <div className="reference-links">
+          <h3>Learn More about Batch vs Stream Processing</h3>
+          <ul>
+            <li><a href="https://aws.amazon.com/big-data/datalakes-and-analytics/batch-vs-stream/" target="_blank" rel="noopener noreferrer">AWS: Batch vs Stream Processing</a></li>
+            <li><a href="https://www.databricks.com/glossary/batch-processing" target="_blank" rel="noopener noreferrer">Databricks: Batch Processing</a></li>
+            <li><a href="https://www.confluent.io/stream-processing/" target="_blank" rel="noopener noreferrer">Confluent: Stream Processing</a></li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,36 @@
+// src/data/MessageQueuesQuestions.js
+const messageQueuesQuestions = [
+    { question: "What is a message queue?", answer: "A system that allows asynchronous communication between services." },
+    { question: "Why are message queues used?", answer: "To decouple services and allow asynchronous communication." },
+    { question: "What is an example of a message queue?", answer: "Amazon SQS or RabbitMQ." },
+    { question: "How do message queues improve scalability?", answer: "By allowing multiple services to handle messages independently." },
+    { question: "What is asynchronous communication?", answer: "A communication method where the sender and receiver do not need to interact with each other at the same time." },
+    { question: "How does message queuing help in decoupling?", answer: "By allowing services to send messages to a queue without waiting for the receiver to be ready." },
+    { question: "What type of messages are stored in message queues?", answer: "Messages can include data, commands, or notifications." },
+    { question: "What is the benefit of decoupling services?", answer: "It makes the system more flexible, scalable, and resilient to failures." },
+    { question: "Can message queues handle retries?", answer: "Yes, most message queues provide retry mechanisms to ensure message delivery." },
+    { question: "What is a dead-letter queue?", answer: "A queue used to store messages that cannot be delivered after multiple attempts." },
+    { question: "What is FIFO in message queues?", answer: "First In First Out, ensuring messages are processed in the order they are received." },
+    { question: "How does RabbitMQ handle message delivery?", answer: "RabbitMQ uses exchange types to route messages to appropriate queues." },
+    { question: "How can message queues improve fault tolerance?", answer: "By ensuring messages are stored until they are successfully processed." },
+    { question: "What is Amazon SQS?", answer: "A managed message queuing service by AWS." },
+    { question: "How does Kafka differ from other message queues?", answer: "Kafka is designed for high throughput and distributed streaming." },
+    { question: "What is message persistence?", answer: "Ensuring messages are not lost even if the system crashes." },
+    { question: "What is the purpose of a message broker?", answer: "To mediate the transfer of messages between different services." },
+    { question: "What are consumers in a message queue?", answer: "Services or processes that consume and process messages from the queue." },
+    { question: "What does 'acknowledgement' mean in message queues?", answer: "A confirmation that a message has been received and processed." },
+    { question: "How does load balancing work with message queues?", answer: "Messages are distributed across multiple consumers for better performance." },
+    { question: "What is a queue overflow?", answer: "When the message queue becomes full and cannot accept more messages." },
+    { question: "How can message queues handle bursts of traffic?", answer: "By storing messages until they can be processed by services at their capacity." },
+    { question: "What is a publisher in the context of message queues?", answer: "A service that sends messages to the queue." },
+    { question: "How does scaling work with message queues?", answer: "More consumers can be added to handle increased message traffic." },
+    { question: "What does 'queueing delay' refer to?", answer: "The time a message spends waiting in the queue before being processed." },
+    { question: "What is Kafka used for?", answer: "Kafka is used for distributed event streaming and real-time data pipelines." },
+    { question: "How does message queuing help in microservices?", answer: "By allowing each microservice to handle requests asynchronously without blocking." },
+    { question: "What is a push-based delivery model?", answer: "Messages are pushed automatically to consumers." },
+    { question: "What is a pull-based delivery model?", answer: "Consumers pull messages from the queue at their own pace." },
+    { question: "What is the main advantage of message queues?", answer: "Increased flexibility and resilience in system communication." },
+  ];
+  
+  export default messageQueuesQuestions;
+  

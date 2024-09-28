@@ -1,0 +1,36 @@
+// src/data/RESTvsRPCQuestions.js
+const restVsRpcQuestions = [
+    { question: "What does REST stand for?", answer: "Representational State Transfer" },
+    { question: "What does RPC stand for?", answer: "Remote Procedure Call" },
+    { question: "How does REST differ from RPC in terms of architecture?", answer: "REST is resource-based, while RPC is function-based." },
+    { question: "Which API style uses verbs like GET, POST, PUT, DELETE?", answer: "REST" },
+    { question: "What data formats are commonly used with REST?", answer: "JSON and XML" },
+    { question: "What data formats are typically used with RPC?", answer: "Binary and Protocol Buffers" },
+    { question: "Is REST stateless?", answer: "Yes" },
+    { question: "Is RPC stateless?", answer: "No, it can be stateful or stateless." },
+    { question: "What kind of architecture does REST follow?", answer: "Client-Server architecture" },
+    { question: "Which API style is more function-oriented?", answer: "RPC" },
+    { question: "How is communication structured in RPC?", answer: "Through procedures or methods that are invoked remotely." },
+    { question: "What is the typical transport protocol used by REST?", answer: "HTTP" },
+    { question: "What is a key advantage of REST over RPC?", answer: "REST is easier to cache due to its resource-based approach." },
+    { question: "Which API style would you use for a lightweight, resource-oriented application?", answer: "REST" },
+    { question: "Which approach is typically faster, REST or RPC?", answer: "RPC, due to its use of binary protocols." },
+    { question: "What are Protocol Buffers?", answer: "A method for serializing structured data used in RPC." },
+    { question: "Does REST rely on URLs for operations?", answer: "Yes, REST uses URLs to represent resources." },
+    { question: "Is RPC more suitable for real-time, low-latency operations?", answer: "Yes" },
+    { question: "What are some common verbs used in REST APIs?", answer: "GET, POST, PUT, DELETE" },
+    { question: "Which architecture type allows greater flexibility in choosing different data formats?", answer: "RPC" },
+    { question: "What is the primary focus of REST?", answer: "Managing and transferring resources" },
+    { question: "Can REST be used with WebSockets?", answer: "No, REST is typically used over HTTP." },
+    { question: "Which API type is preferred for tightly coupled systems?", answer: "RPC" },
+    { question: "What is the difference in error handling between REST and RPC?", answer: "REST uses standard HTTP response codes, while RPC uses custom error handling." },
+    { question: "Is REST designed to be client-server?", answer: "Yes" },
+    { question: "Which API style typically has a simpler structure, REST or RPC?", answer: "REST" },
+    { question: "Which API style is used in gRPC?", answer: "RPC" },
+    { question: "Does REST require a stateless communication protocol?", answer: "Yes, each request is independent." },
+    { question: "Which approach generally has a more complex implementation, REST or RPC?", answer: "RPC, due to its procedure call structure." },
+    { question: "Which approach is more appropriate for microservices that need to perform remote procedure calls?", answer: "RPC" },
+  ];
+  
+  export default restVsRpcQuestions;
+  

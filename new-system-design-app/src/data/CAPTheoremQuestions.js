@@ -1,0 +1,36 @@
+// src/data/CAPTheoremQuestions.js
+const capTheoremQuestions = [
+    { question: "What does CAP stand for in CAP Theorem?", answer: "Consistency, Availability, Partition Tolerance" },
+    { question: "What is the CAP theorem?", answer: "It states that in a distributed system, you can only guarantee two of the three properties: Consistency, Availability, Partition Tolerance" },
+    { question: "What does Consistency (C) in CAP mean?", answer: "Every read receives the most recent write or an error" },
+    { question: "What does Availability (A) in CAP mean?", answer: "Every request receives a response, without guaranteeing it contains the most recent write" },
+    { question: "What does Partition Tolerance (P) in CAP mean?", answer: "The system continues to operate despite network partitions" },
+    { question: "Which two properties can be guaranteed in a CA system?", answer: "Consistency and Availability, without Partition Tolerance" },
+    { question: "Which two properties can be guaranteed in a CP system?", answer: "Consistency and Partition Tolerance, without Availability" },
+    { question: "Which two properties can be guaranteed in an AP system?", answer: "Availability and Partition Tolerance, without Consistency" },
+    { question: "Can a distributed system guarantee all three CAP properties simultaneously?", answer: "No, it is impossible to guarantee all three in a distributed system" },
+    { question: "What is an example of a CP system?", answer: "Apache HBase, which ensures consistency and partition tolerance" },
+    { question: "What is an example of an AP system?", answer: "Cassandra, which ensures availability and partition tolerance" },
+    { question: "What is an example of a CA system?", answer: "A traditional relational database, which prioritizes consistency and availability without partition tolerance" },
+    { question: "How does partition tolerance affect a distributed system?", answer: "It allows the system to continue functioning even when some nodes cannot communicate" },
+    { question: "Which CAP property ensures the latest data is always read?", answer: "Consistency" },
+    { question: "What does it mean for a system to be eventually consistent?", answer: "The system guarantees that, eventually, all nodes will have the same data" },
+    { question: "Which CAP properties are most important for a banking system?", answer: "Consistency and Availability" },
+    { question: "What kind of trade-offs does CAP theorem imply?", answer: "You must choose which two properties are most critical based on your application’s needs" },
+    { question: "Which CAP property allows the system to respond even during network failures?", answer: "Partition Tolerance" },
+    { question: "What is the main challenge of ensuring Availability?", answer: "Ensuring the system always returns a response, even during failures" },
+    { question: "Can Availability and Consistency be guaranteed in a network partition?", answer: "No, one must be sacrificed to maintain the other during a partition" },
+    { question: "Why can't a distributed system guarantee all three CAP properties?", answer: "Because network partitions create a situation where either consistency or availability must be sacrificed" },
+    { question: "Which CAP property relates to how the system handles network failures?", answer: "Partition Tolerance" },
+    { question: "How is consistency different from availability?", answer: "Consistency ensures the latest data is read, while availability ensures a response is always provided" },
+    { question: "What is an example of a use case requiring high consistency?", answer: "Banking transactions" },
+    { question: "What is an example of a use case prioritizing availability?", answer: "Social media feeds" },
+    { question: "Which database type is known for strong consistency?", answer: "Relational databases like MySQL" },
+    { question: "Which CAP property is non-negotiable in distributed systems?", answer: "Partition Tolerance" },
+    { question: "What would you prioritize for an e-commerce website during a sale?", answer: "Availability and Partition Tolerance" },
+    { question: "What does the CAP theorem teach us about distributed system design?", answer: "It helps us understand the trade-offs necessary for system reliability" },
+    { question: "Why might a system choose to prioritize availability over consistency?", answer: "To ensure users always get a response, even if the data is not the latest" },
+  ];
+  
+  export default capTheoremQuestions;
+  

@@ -1,0 +1,36 @@
+// src/data/ProxyServerQuestions.js
+const proxyServerQuestions = [
+    { question: "What is a proxy server?", answer: "An intermediary between a client and the internet that enhances security, privacy, and performance." },
+    { question: "What is the main use of a proxy server in an organization?", answer: "To control employee internet access and monitor web traffic for security purposes." },
+    { question: "How does a proxy server help reduce bandwidth usage?", answer: "By caching web pages to serve repeated requests without going to the original server." },
+    { question: "What are the privacy benefits of a proxy server?", answer: "It can hide the client's IP address and make browsing more anonymous." },
+    { question: "How does a proxy server enhance security?", answer: "By filtering requests, blocking malicious traffic, and acting as a firewall." },
+    { question: "What is forward proxy?", answer: "A type of proxy that acts on behalf of clients to access resources on the internet." },
+    { question: "What is reverse proxy?", answer: "A proxy that sits in front of a server, handling incoming requests for the server." },
+    { question: "How does a reverse proxy help in load balancing?", answer: "It distributes client requests across multiple backend servers." },
+    { question: "What is caching in the context of a proxy server?", answer: "Storing frequently requested content to serve it quickly for future requests." },
+    { question: "Can a proxy server be used for bypassing geo-restrictions?", answer: "Yes, it can be configured to mask the user's location, enabling access to restricted content." },
+    { question: "What kind of network traffic can be filtered by a proxy server?", answer: "HTTP, HTTPS, FTP, and other protocols can be filtered for security purposes." },
+    { question: "How does a proxy server affect latency?", answer: "Caching reduces latency, but if overused, proxies can introduce additional delays." },
+    { question: "What are transparent proxies?", answer: "Proxies that do not modify the client's request or hide the client's IP address." },
+    { question: "What is a SOCKS proxy?", answer: "A type of proxy that handles any kind of network traffic, providing more flexibility than HTTP proxies." },
+    { question: "How can a proxy server be used to monitor internet usage?", answer: "It logs all the client requests, which can be analyzed for monitoring purposes." },
+    { question: "What is proxy chaining?", answer: "Using multiple proxies in sequence to add extra layers of anonymity." },
+    { question: "How can proxy servers improve web page loading times?", answer: "By caching content and serving it directly to the client instead of fetching it again from the server." },
+    { question: "Can a proxy server prevent direct exposure of an internal network to the internet?", answer: "Yes, it acts as an intermediary to shield internal network details from external servers." },
+    { question: "How does a proxy server handle HTTPS requests?", answer: "It may decrypt, inspect, and then re-encrypt the data before forwarding it." },
+    { question: "What is an open proxy?", answer: "A proxy that anyone on the internet can use to access websites." },
+    { question: "What are the risks of using an open proxy?", answer: "It may log user activity, inject malware, or compromise privacy." },
+    { question: "How do proxies handle DNS requests?", answer: "Proxies can perform DNS resolution on behalf of clients, sometimes hiding DNS queries." },
+    { question: "Can proxies be used to restrict internet access?", answer: "Yes, they can block specific websites or restrict categories of content." },
+    { question: "What role does a proxy server play in content filtering?", answer: "It inspects and blocks content based on defined rules, such as blocking malicious or unwanted URLs." },
+    { question: "Why might a proxy server be used in a corporate environment?", answer: "For improved security, content filtering, monitoring, and efficient internet usage." },
+    { question: "How can a reverse proxy protect a server?", answer: "It hides the server's IP address, reducing exposure to direct attacks." },
+    { question: "What is NAT proxy?", answer: "A proxy used to translate the private IP addresses of devices into a single public IP address." },
+    { question: "How can proxies reduce data transfer costs?", answer: "By caching frequently accessed data, reducing the need to download it repeatedly." },
+    { question: "What is an HTTP proxy?", answer: "A proxy that handles only HTTP requests, often used to filter and cache web traffic." },
+    { question: "What are proxy auto-configuration scripts?", answer: "Scripts that specify how web browsers and other agents should choose an appropriate proxy for each request." },
+  ];
+  
+  export default proxyServerQuestions;
+  

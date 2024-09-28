@@ -1,3 +1,5 @@
+/* styles/Checksum.css */
+
 .checksum-container {
   padding: 40px;
   max-width: 900px;
@@ -23,7 +25,7 @@
 .checksum-content {
   font-size: 1.2em;
   line-height: 1.7;
-  color: #2d3748;
+  color: #4a5568;
   margin-bottom: 25px;
 }
 
@@ -35,8 +37,8 @@
 .checksum-diagram img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 

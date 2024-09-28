@@ -1,0 +1,35 @@
+// src/data/ACIDQuestions.js
+const acidQuestions = [
+    { question: "What does ACID stand for?", answer: "Atomicity, Consistency, Isolation, Durability" },
+    { question: "What is the main purpose of the ACID properties?", answer: "To ensure reliable processing of database transactions" },
+    { question: "What does Atomicity mean in ACID properties?", answer: "All parts of a transaction must be completed or none at all" },
+    { question: "What happens if an ACID transaction fails during Atomicity?", answer: "The entire transaction is rolled back" },
+    { question: "How does Consistency in ACID affect a transaction?", answer: "It ensures the database moves from one valid state to another" },
+    { question: "What are database constraints in relation to Consistency?", answer: "Rules that must be satisfied for database integrity" },
+    { question: "What does Isolation in ACID properties ensure?", answer: "Concurrent transactions leave the database in the same state as if executed sequentially" },
+    { question: "How is Isolation achieved in databases?", answer: "Through locking mechanisms to control access to data" },
+    { question: "What is the role of Durability in ACID?", answer: "Ensures that once a transaction is committed, it will remain so" },
+    { question: "How can a database ensure Durability?", answer: "By saving changes to stable storage or a persistent medium" },
+    { question: "What happens if a system crashes after a transaction commits in an ACID system?", answer: "Durability ensures that the transaction remains committed" },
+    { question: "How does ACID ensure the consistency of the database?", answer: "By applying all rules and constraints during each transaction" },
+    { question: "Why is Atomicity important in financial transactions?", answer: "It prevents partial changes, ensuring either all or no changes occur" },
+    { question: "Which ACID property ensures that a failed transaction doesn`t affect the database?", answer: "Atomicity" },
+    { question: "What is a valid state in the context of database consistency?", answer: "A state where all constraints and rules are satisfied" },
+    { question: "How does Durability handle power failures?", answer: "It guarantees committed transactions remain intact through stable storage" },
+    { question: "Which ACID property deals with isolation between concurrent users?", answer: "Isolation" },
+    { question: "How does a database ensure Isolation without deadlocks?", answer: "By employing deadlock prevention and detection techniques" },
+    { question: "What is a rollback?", answer: "Undoing changes made by a failed transaction to maintain atomicity" },
+    { question: "Can a transaction be partially committed under ACID?", answer: "No, transactions are atomic and must be fully completed or not at all" },
+    { question: "What role does Isolation play in avoiding dirty reads?", answer: "It ensures that a transaction cannot read data from another uncommitted transaction" },
+    { question: "Which ACID property is related to saving data after a transaction?", answer: "Durability" },
+    { question: "What is a cascading rollback?", answer: "A rollback triggered by the failure of another transaction" },
+    { question: "How does Consistency ensure integrity?", answer: "By enforcing rules like foreign key constraints during every transaction" },
+    { question: "How does the ACID model handle concurrency?", answer: "Using locks and serialization to maintain isolation" },
+    { question: "What is meant by a consistent state of the database?", answer: "A state where all transactions are complete and constraints are satisfied" },
+    { question: "Why is durability important in banking systems?", answer: "It ensures that once transactions are committed, they survive power or system failures" },
+    { question: "How does the database enforce Atomicity?", answer: "Using transaction logs to undo incomplete transactions" },
+    { question: "How does a transaction achieve Isolation using snapshot isolation?", answer: "It uses a snapshot of the data so that each transaction works independently" },
+  ];
+  
+  export default acidQuestions;
+  

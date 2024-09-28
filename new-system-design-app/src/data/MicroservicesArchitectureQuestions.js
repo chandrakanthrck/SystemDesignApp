@@ -1,0 +1,36 @@
+// src/data/MicroservicesArchitectureQuestions.js
+const microservicesQuestions = [
+    { question: "What is a microservices architecture?", answer: "A design pattern that develops an application as a collection of loosely coupled, independently deployable services." },
+    { question: "How does microservices architecture improve scalability?", answer: "By allowing each service to be scaled independently based on its requirements." },
+    { question: "What is one benefit of microservices over monolithic architecture?", answer: "Better fault isolation—if one service fails, the others can continue to function." },
+    { question: "How are microservices different from a monolith?", answer: "Microservices are independently deployable units, whereas a monolith is a single unified unit." },
+    { question: "What is the role of an API gateway in microservices?", answer: "It acts as an entry point for all client requests, routing them to the appropriate microservices." },
+    { question: "How do microservices enhance development speed?", answer: "Different teams can work on different services simultaneously without dependencies on each other." },
+    { question: "What is a common communication method used between microservices?", answer: "REST APIs or message brokers like Kafka." },
+    { question: "How does microservices architecture support different technology stacks?", answer: "Each service can be built using the best-suited technology, allowing for polyglot programming." },
+    { question: "What is a service registry?", answer: "A directory where all microservices are registered, used for service discovery." },
+    { question: "How does microservices architecture improve fault tolerance?", answer: "Failures are contained within individual services without affecting the entire system." },
+    { question: "What is a challenge often associated with microservices?", answer: "Managing inter-service communication and data consistency across services." },
+    { question: "What is a container's role in microservices?", answer: "Containers package services along with their dependencies, ensuring consistent environments across deployments." },
+    { question: "How do microservices help with CI/CD?", answer: "Individual services can be deployed independently, reducing the risk and complexity of deployments." },
+    { question: "What is service discovery in microservices?", answer: "The process by which microservices locate each other in a distributed environment." },
+    { question: "Why is monitoring more challenging in microservices?", answer: "There are more moving parts, and you need to monitor each service and their interactions." },
+    { question: "What is an API Gateway used for?", answer: "Handling client requests, routing them to appropriate microservices, and sometimes providing additional features like load balancing." },
+    { question: "How can microservices lead to faster failure recovery?", answer: "Individual services can be restarted or replaced independently without affecting other parts of the system." },
+    { question: "What is meant by 'loose coupling' in microservices?", answer: "Services operate independently and communicate through well-defined APIs, reducing dependencies." },
+    { question: "What is a benefit of using different databases in microservices?", answer: "Each service can use the database type best suited to its needs, enabling polyglot persistence." },
+    { question: "How does a service mesh help in a microservices architecture?", answer: "It manages service-to-service communication, including load balancing, failure recovery, and monitoring." },
+    { question: "What is the role of orchestration in microservices?", answer: "Managing, scaling, and maintaining the deployment and health of microservices using tools like Kubernetes." },
+    { question: "Why might you choose microservices for a large application?", answer: "For better scalability, fault isolation, and to allow different teams to work independently." },
+    { question: "What is a distributed data management challenge in microservices?", answer: "Ensuring data consistency across different services with separate databases." },
+    { question: "What is eventual consistency in the context of microservices?", answer: "The state where all replicas of data become consistent eventually, useful when immediate consistency is not needed." },
+    { question: "What is the main function of circuit breakers in microservices?", answer: "To prevent cascading failures by stopping requests to failing services." },
+    { question: "What is API composition in microservices?", answer: "Combining data from multiple services to provide a response to a client request." },
+    { question: "What are the advantages of independent deployment in microservices?", answer: "It reduces downtime during updates and allows each service to be deployed on its own schedule." },
+    { question: "What is a saga pattern in microservices?", answer: "A sequence of transactions across multiple services to maintain consistency." },
+    { question: "Why are microservices considered better for DevOps?", answer: "They fit well with CI/CD pipelines, allowing for continuous integration and delivery of each service." },
+    { question: "What is meant by 'domain-driven design' in microservices?", answer: "Splitting services based on specific business domains to make the architecture more intuitive and manageable." },
+  ];
+  
+  export default microservicesQuestions;
+  

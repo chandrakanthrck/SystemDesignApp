@@ -8,6 +8,10 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 
+.data-replication-container:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
 .data-replication-header {
   font-size: 34px;
   font-weight: bold;
@@ -37,6 +41,11 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.data-replication-diagram img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 .interactive-section {
   margin-top: 40px;
   padding: 30px;
@@ -54,6 +63,7 @@
 
 .replication-simulation-button {
   padding: 14px 28px;
+  margin: 10px;
   background-color: #17a2b8;
   color: #ffffff;
   border: none;

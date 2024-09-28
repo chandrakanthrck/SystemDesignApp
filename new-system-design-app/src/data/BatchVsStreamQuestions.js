@@ -1,0 +1,36 @@
+// src/data/BatchVsStreamQuestions.js
+const batchVsStreamQuestions = [
+    { question: "What is batch processing?", answer: "Processing large volumes of data at scheduled intervals" },
+    { question: "What is stream processing?", answer: "Processing data continuously as it arrives" },
+    { question: "Which processing method is better for real-time analytics?", answer: "Stream processing" },
+    { question: "Give an example of a use case for batch processing.", answer: "Payroll systems or large-scale data aggregation" },
+    { question: "Give an example of a use case for stream processing.", answer: "Real-time fraud detection" },
+    { question: "How does stream processing handle data?", answer: "It processes data on the fly as it is produced" },
+    { question: "Which is better for low-latency applications?", answer: "Stream processing" },
+    { question: "What are the pros of batch processing?", answer: "Simple to implement and efficient for large static datasets" },
+    { question: "What is the main con of batch processing?", answer: "It lacks real-time responsiveness" },
+    { question: "What kind of data is batch processing suitable for?", answer: "Static, accumulated datasets" },
+    { question: "Why is batch processing often easier to implement?", answer: "It processes data in bulk without dealing with real-time complexity" },
+    { question: "What is an example of a batch processing tool?", answer: "Apache Hadoop" },
+    { question: "What is an example of a stream processing tool?", answer: "Apache Kafka or Apache Flink" },
+    { question: "Which type of processing would be better for monitoring financial transactions in real time?", answer: "Stream processing" },
+    { question: "What is a key challenge of stream processing?", answer: "Handling continuous data with low latency and scalability" },
+    { question: "Which processing type would be used for analyzing daily sales data?", answer: "Batch processing" },
+    { question: "Can batch processing handle real-time data?", answer: "No, batch processing is not suitable for real-time data needs" },
+    { question: "How does stream processing benefit fraud detection?", answer: "It processes data in real time to identify suspicious activities instantly" },
+    { question: "What is a disadvantage of stream processing?", answer: "More complex to implement and requires high scalability" },
+    { question: "In which scenario is batch processing preferred?", answer: "When analyzing historical data for trends" },
+    { question: "How does batch processing impact latency?", answer: "Batch processing has higher latency since it waits to accumulate data before processing" },
+    { question: "Which method is better for updating data warehouses?", answer: "Batch processing" },
+    { question: "What is the benefit of using stream processing for sensor data?", answer: "It allows immediate response to changing conditions" },
+    { question: "Which processing is best for daily report generation?", answer: "Batch processing" },
+    { question: "How does stream processing handle data spikes?", answer: "Stream processing must scale in real-time to accommodate spikes" },
+    { question: "What kind of data does stream processing deal with?", answer: "Continuous, real-time data" },
+    { question: "Can batch processing be used for machine learning model training?", answer: "Yes, batch processing can be used for training models on large datasets" },
+    { question: "Why is low latency crucial for stream processing?", answer: "It allows near-instantaneous processing of incoming data" },
+    { question: "What kind of processing would you use for a traffic monitoring system?", answer: "Stream processing" },
+    { question: "How does batch processing reduce computational load?", answer: "It processes large chunks of data at once, reducing frequent computational tasks" },
+  ];
+  
+  export default batchVsStreamQuestions;
+  

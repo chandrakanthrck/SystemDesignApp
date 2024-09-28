@@ -1,0 +1,35 @@
+// src/data/CDNQuestions.js
+const cdnQuestions = [
+    { question: "What does CDN stand for?", answer: "Content Delivery Network" },
+    { question: "How does a CDN improve website performance?", answer: "By reducing latency through serving content from servers closer to users" },
+    { question: "What is latency?", answer: "The delay before a transfer of data begins following an instruction" },
+    { question: "How does a CDN handle high traffic?", answer: "By distributing content across multiple edge servers" },
+    { question: "Give an example of a popular CDN provider.", answer: "Cloudflare" },
+    { question: "What kind of content do CDNs usually deliver?", answer: "Static files like images, videos, and JavaScript files" },
+    { question: "What is an edge server?", answer: "A server that is part of a CDN located closer to users to improve response times" },
+    { question: "How do CDNs help reduce latency?", answer: "By caching content at servers closer to the user" },
+    { question: "Why is CDN important for global users?", answer: "It provides consistent performance regardless of user location" },
+    { question: "What is a caching server?", answer: "A server that temporarily stores copies of content for faster access" },
+    { question: "How do CDNs help with security?", answer: "By mitigating DDoS attacks and providing extra security layers" },
+    { question: "What happens if one CDN server fails?", answer: "Traffic is rerouted to another nearby server to ensure uptime" },
+    { question: "Can a CDN deliver dynamic content?", answer: "Yes, but primarily CDNs are used for caching static content" },
+    { question: "What is the origin server?", answer: "The original server where the content is stored before being distributed by a CDN" },
+    { question: "How does a CDN help with SEO?", answer: "By improving page load times, which can positively impact search rankings" },
+    { question: "What is a pull CDN?", answer: "A CDN that fetches content from the origin server upon request" },
+    { question: "What is a push CDN?", answer: "A CDN where content is manually uploaded to the edge servers" },
+    { question: "Do CDNs reduce server load?", answer: "Yes, by offloading content delivery to edge servers" },
+    { question: "How do CDNs improve reliability?", answer: "By providing redundant servers to ensure content is always available" },
+    { question: "What does DDoS stand for?", answer: "Distributed Denial of Service" },
+    { question: "How can a CDN help during a traffic spike?", answer: "It distributes the load across multiple servers to avoid downtime" },
+    { question: "What is a POP in a CDN?", answer: "Point of Presence, a location where CDN servers are housed" },
+    { question: "Is using a CDN beneficial for mobile users?", answer: "Yes, it helps in reducing latency for mobile users as well" },
+    { question: "Can a CDN cache API responses?", answer: "Yes, CDNs can cache static API responses to improve speed" },
+    { question: "What is content caching?", answer: "Storing copies of content for faster delivery to users" },
+    { question: "How does a CDN reduce bandwidth costs?", answer: "By caching content and reducing requests to the origin server" },
+    { question: "What role does DNS play in CDNs?", answer: "DNS directs user requests to the nearest CDN server" },
+    { question: "How do CDNs benefit streaming services?", answer: "They reduce buffering by caching video content closer to the viewers" },
+    { question: "Why do e-commerce websites use CDNs?", answer: "To ensure fast load times for product images and reduce abandonment rates" },
+  ];
+  
+  export default cdnQuestions;
+  

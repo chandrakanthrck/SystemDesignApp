@@ -1,3 +1,5 @@
+/* styles/Caching.css */
+
 .caching-container {
   padding: 40px;
   max-width: 900px;
@@ -6,6 +8,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .caching-container:hover {
@@ -51,63 +54,53 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.interactive-section {
-  margin-top: 40px;
-  padding: 25px;
-  background-color: #e6fffa;
+.reference-links {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #edf2f7;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.interactive-section:hover {
-  background-color: #b2f5ea;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+.reference-links h3 {
+  margin-bottom: 15px;
 }
 
-.interactive-heading {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #38a169;
+.reference-links ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.interactive-button {
-  padding: 15px 30px;
-  background-color: #38a169;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
+.reference-links li {
+  margin-bottom: 10px;
 }
 
-.interactive-button:hover {
-  background-color: #2f855a;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.interactive-button:active {
-  transform: translateY(1px); /* Button moves slightly down on click for feedback */
-}
-
-.caching-list {
-  margin-top: 25px;
-  list-style-type: disc;
-  padding-left: 30px;
-  color: #2d3748;
-  font-size: 1.1em;
-}
-
-.caching-note {
+.quiz-section {
   margin-top: 30px;
-  font-style: italic;
-  color: #4a5568;
-  text-align: center;
-  font-size: 1.1em;
-  transition: color 0.3s ease-in-out;
+  padding: 20px;
+  background-color: #e2e8f0; /* Light background for quiz section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-.caching-note:hover {
-  color: #2d3748; /* Slight color change on hover */
+.quiz-button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform for feedback */
+}
+
+.quiz-button:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.quiz-results {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #2d3748;
 }

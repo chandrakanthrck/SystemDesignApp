@@ -1,0 +1,35 @@
+// src/data/CachingQuestions.js
+const cachingQuestions = [
+    { question: "What is caching?", answer: "A technique to store data temporarily for faster retrieval" },
+    { question: "How does caching improve application performance?", answer: "By reducing the time taken to access frequently requested data" },
+    { question: "What is memory caching?", answer: "Storing frequently accessed data in memory to reduce database load" },
+    { question: "What is CDN caching?", answer: "Storing copies of static content on servers distributed globally to reduce latency" },
+    { question: "What is client-side caching?", answer: "Storing data on the user's device to improve performance" },
+    { question: "How does caching reduce latency?", answer: "By storing data closer to the user or in a more easily accessible location" },
+    { question: "What is cache invalidation?", answer: "The process of removing or updating cached data when it becomes outdated" },
+    { question: "What is the benefit of using a CDN for caching?", answer: "It helps serve static files from servers closer to the user's location" },
+    { question: "Which caching strategy stores data on the client device?", answer: "Client-side caching" },
+    { question: "How does caching benefit e-commerce websites?", answer: "By speeding up page loads for frequently viewed products" },
+    { question: "What is an example of server-side caching?", answer: "Caching data in Redis for fast retrieval" },
+    { question: "What is the main drawback of caching?", answer: "Data might become outdated or inconsistent" },
+    { question: "How does caching reduce database load?", answer: "By storing frequently accessed data in memory rather than querying the database" },
+    { question: "What is cache hit?", answer: "When a requested piece of data is found in the cache" },
+    { question: "What is cache miss?", answer: "When a requested piece of data is not found in the cache" },
+    { question: "Which caching strategy is best for reducing bandwidth usage?", answer: "CDN caching" },
+    { question: "What is a TTL (Time to Live) in caching?", answer: "The time after which cached data will expire and be removed" },
+    { question: "How does browser caching help with website performance?", answer: "It allows data to be stored locally, reducing load times for repeated visits" },
+    { question: "What is write-through caching?", answer: "A strategy where data is written to the cache and the database at the same time" },
+    { question: "What is read-through caching?", answer: "A caching strategy where data is loaded from the cache, and if it misses, it's loaded from the database" },
+    { question: "What is a cache eviction policy?", answer: "A rule that determines which items should be removed when the cache is full" },
+    { question: "Name an example of a cache eviction policy.", answer: "Least Recently Used (LRU)" },
+    { question: "What is the purpose of cache warming?", answer: "To load frequently requested data into the cache before it is needed" },
+    { question: "How does caching affect scalability?", answer: "It allows systems to handle more requests by reducing load on backend services" },
+    { question: "What is distributed caching?", answer: "A caching solution that spreads data across multiple servers" },
+    { question: "What is cache coherence?", answer: "Ensuring that all copies of data in a distributed cache are consistent" },
+    { question: "Which caching method stores entire web pages for faster access?", answer: "Full-page caching" },
+    { question: "Why is caching important for mobile applications?", answer: "It reduces data usage and improves responsiveness" },
+    { question: "How does caching help reduce costs?", answer: "By decreasing the number of database queries and reducing server load" },
+  ];
+  
+  export default cachingQuestions;
+  

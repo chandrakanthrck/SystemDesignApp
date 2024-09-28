@@ -1,0 +1,36 @@
+// src/data/SQLvsNoSQLQuestions.js
+const sqlVsNoSqlQuestions = [
+    { question: "What does SQL stand for?", answer: "Structured Query Language" },
+    { question: "Is SQL relational or non-relational?", answer: "Relational" },
+    { question: "Does NoSQL use a fixed or dynamic schema?", answer: "Dynamic schema" },
+    { question: "Which type of database is better for structured data?", answer: "SQL" },
+    { question: "What type of consistency does NoSQL usually offer?", answer: "Eventual consistency" },
+    { question: "What does ACID stand for in SQL databases?", answer: "Atomicity, Consistency, Isolation, Durability" },
+    { question: "What type of scaling does SQL support?", answer: "Vertical scaling" },
+    { question: "What type of scaling does NoSQL support?", answer: "Horizontal scaling" },
+    { question: "Are SQL databases schema-less?", answer: "No, they have a fixed schema." },
+    { question: "Which type of database is more suitable for hierarchical data storage?", answer: "NoSQL" },
+    { question: "Which database type is generally better for complex queries?", answer: "SQL" },
+    { question: "Is NoSQL better for rapid development?", answer: "Yes, due to its flexibility." },
+    { question: "Which type of database is more suitable for financial transactions?", answer: "SQL" },
+    { question: "What are the common data formats used by NoSQL?", answer: "Document, key-value, graph, and column family" },
+    { question: "Which database is typically better for large-scale distributed data?", answer: "NoSQL" },
+    { question: "Which type of database is more consistent?", answer: "SQL" },
+    { question: "Can NoSQL handle structured and unstructured data?", answer: "Yes" },
+    { question: "Which type of database is more flexible?", answer: "NoSQL" },
+    { question: "Does SQL require predefined tables?", answer: "Yes" },
+    { question: "What kind of applications are NoSQL databases ideal for?", answer: "Real-time big data applications" },
+    { question: "Is SQL well suited for multi-row transactions?", answer: "Yes" },
+    { question: "Do NoSQL databases support ACID transactions?", answer: "Not always, some NoSQL databases support ACID partially." },
+    { question: "Which database type uses tables to store data?", answer: "SQL" },
+    { question: "Which database type can be easily scaled out by adding more nodes?", answer: "NoSQL" },
+    { question: "What type of data structure is a key-value pair?", answer: "NoSQL" },
+    { question: "Is SQL or NoSQL preferred for fixed, predictable data models?", answer: "SQL" },
+    { question: "Which type of database is better for flexibility in data storage?", answer: "NoSQL" },
+    { question: "What is an example of a NoSQL database?", answer: "MongoDB, Cassandra, Redis" },
+    { question: "What is an example of an SQL database?", answer: "MySQL, PostgreSQL, Oracle" },
+    { question: "Do NoSQL databases provide relationships between data?", answer: "No, relationships are usually not explicitly enforced." },
+  ];
+  
+  export default sqlVsNoSqlQuestions;
+  
