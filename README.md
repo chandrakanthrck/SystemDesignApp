@@ -1,7 +1,5 @@
 # System Design App
 
-![System Design App](public/images/system-design-app-banner.png)
-
 A React application that provides interactive visual representations and detailed explanations of key system design concepts, such as caching, load balancing, CAP theorem, distributed systems, and more. This app is designed to help software engineers and learners grasp complex system design principles in an engaging way.
 
 ## Table of Contents
