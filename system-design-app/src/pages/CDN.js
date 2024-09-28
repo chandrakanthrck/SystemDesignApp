@@ -11,7 +11,7 @@ function CDN() {
         by caching content closer to users, reducing latency and load times.
       </p>
       <div className="cdn-diagram">
-        <img src="path/to/cdn-diagram.png" alt="CDN Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/cdn-diagram.png`} alt="CDN Diagram" className="concept-image" />
         {/* Replace with an actual image link or interactive diagram */}
       </div>
       <div className="interactive-section">

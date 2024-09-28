@@ -14,7 +14,7 @@ function DatabaseScaling() {
         <li>Horizontal Scaling: Adding more servers to distribute the load.</li>
       </ul>
       <div className="scaling-diagram">
-        <img src="path/to/database-scaling-diagram.png" alt="Database Scaling Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/database-scaling-diagram.png`} alt="Database Scaling Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive Scaling Simulation</h2>

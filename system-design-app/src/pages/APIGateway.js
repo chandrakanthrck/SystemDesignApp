@@ -10,7 +10,7 @@ function APIGateway() {
         security, rate limiting, and load balancing, simplifying client interactions with back-end services.
       </p>
       <div className="api-gateway-diagram">
-        <img src="path/to/api-gateway-diagram.png" alt="API Gateway Diagram" />
+        <img src={`${process.env.PUBLIC_URL}/images/api-gateway-diagram.png`} alt="API Gateway Diagram" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Try It Out</h3>

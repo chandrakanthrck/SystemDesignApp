@@ -11,7 +11,7 @@ function DistributedCaching() {
         ensuring that users can access cached data from the closest server.
       </p>
       <div className="caching-diagram">
-        <img src="path/to/distributed-caching-diagram.png" alt="Distributed Caching Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/distributed-caching-diagram.png`} alt="Distributed Caching Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive Distributed Caching Simulation</h2>

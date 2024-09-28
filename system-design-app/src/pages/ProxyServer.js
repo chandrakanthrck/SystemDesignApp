@@ -10,7 +10,7 @@ function ProxyServer() {
         It is often used to cache web pages and reduce bandwidth usage.
       </p>
       <div className="proxy-server-diagram">
-        <img src="path/to/proxy-server-diagram.png" alt="Proxy Server Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/proxy-server-diagram.png`} alt="Proxy Server Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>How Proxy Servers Work</h2>

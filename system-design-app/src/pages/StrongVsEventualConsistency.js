@@ -10,7 +10,7 @@ function StrongVsEventualConsistency() {
         Eventual consistency means that data will eventually be consistent across all nodes, which works well for systems requiring high availability.
       </p>
       <div className="consistency-diagram">
-        <img src="path/to/consistency-diagram.png" alt="Strong vs Eventual Consistency Diagram" className="concept-image" />
+      <img src={`${process.env.PUBLIC_URL}/images/consistency-diagram.png`} alt="Strong vs Eventual Consistency Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive Examples</h2>

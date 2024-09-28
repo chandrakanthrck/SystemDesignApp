@@ -11,7 +11,7 @@ function DataReplication() {
         and can be critical for disaster recovery strategies.
       </p>
       <div className="data-replication-diagram">
-        <img src="path/to/data-replication-diagram.png" alt="Data Replication Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/data-replication-diagram.png`} alt="Data Replication Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive Data Replication Simulation</h2>

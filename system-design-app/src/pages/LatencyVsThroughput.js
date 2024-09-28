@@ -12,7 +12,7 @@ function LatencyThroughput() {
         network performance.
       </p>
       <div className="lt-diagram">
-        <img src="path/to/latency-throughput-diagram.png" alt="Latency vs Throughput Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/latency-throughput-diagram.png`} alt="Latency vs Throughput Diagram" className="concept-image" />
       </div>
       <div className="lt-comparison">
         <h2>Understanding the Trade-offs</h2>

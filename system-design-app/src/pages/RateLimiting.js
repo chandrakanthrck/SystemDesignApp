@@ -10,7 +10,7 @@ function RateLimiting() {
         protecting systems from overload, abuse, and attacks while ensuring fair usage among users.
       </p>
       <div className="rate-limiting-diagram">
-        <img src="path/to/rate-limiting-diagram.png" alt="Rate Limiting Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/rate-limiting-diagram.png`} alt="Rate Limiting Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Understanding Rate Limiting</h2>

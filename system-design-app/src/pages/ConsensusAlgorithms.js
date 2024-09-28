@@ -10,7 +10,7 @@ function ConsensusAlgorithms() {
         data consistency and reliability across nodes in a network. Popular examples include Paxos and Raft.
       </p>
       <div className="consensus-diagram">
-        <img src="path/to/consensus-algorithms-diagram.png" alt="Consensus Algorithms Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/consensus-algorithms-diagram.png`} alt="Consensus Algorithms Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Explore Consensus in Action</h3>

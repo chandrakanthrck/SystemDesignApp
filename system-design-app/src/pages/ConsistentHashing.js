@@ -11,7 +11,7 @@ function ConsistentHashing() {
         significant data movement, making it a key component in load balancing and distributed caching systems.
       </p>
       <div className="consistent-hashing-diagram">
-        <img src="path/to/consistent-hashing-diagram.png" alt="Consistent Hashing Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/consistent-hashing-diagram.png`} alt="Consistent Hashing Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Try Consistent Hashing in Action</h3>

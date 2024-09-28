@@ -10,7 +10,7 @@ function DNS() {
         to access websites without memorizing complex numeric addresses.
       </p>
       <div className="dns-diagram">
-        <img src="path/to/dns-diagram.png" alt="DNS Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/dns-diagram.png`} alt="DNS Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive DNS Simulation</h2>

@@ -10,7 +10,7 @@ function MessageQueues() {
         without waiting for each other, which increases system resilience.
       </p>
       <div className="mq-diagram">
-        <img src="path/to/message-queues-diagram.png" alt="Message Queues Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/message-queues-diagram.png`} alt="Message Queues Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Understanding Message Queues</h2>

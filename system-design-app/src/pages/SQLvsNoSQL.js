@@ -11,7 +11,7 @@ function SQLvsNoSQL() {
         needs and data requirements.
       </p>
       <div className="sql-nosql-diagram">
-        <img src="path/to/sql-vs-noso-diagram.png" alt="SQL vs NoSQL Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/sql-vs-noso-diagram.png`} alt="SQL vs NoSQL Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Comparison Table</h2>

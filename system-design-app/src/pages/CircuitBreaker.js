@@ -10,7 +10,7 @@ function CircuitBreaker() {
         ensuring resources are conserved until the failing service recovers.
       </p>
       <div className="circuitbreaker-diagram">
-        <img src="path/to/circuit-breaker-diagram.png" alt="Circuit Breaker Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/circuit-breaker-diagram.png`} alt="Circuit Breaker Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Learn How Circuit Breaker Works</h3>

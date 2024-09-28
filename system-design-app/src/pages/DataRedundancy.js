@@ -11,7 +11,7 @@ function DataRedundancy() {
         resilience in the event of hardware failures or network issues.
       </p>
       <div className="data-redundancy-diagram">
-        <img src="path/to/data-redundancy-diagram.png" alt="Data Redundancy Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/data-redundancy-diagram.png`} alt="Data Redundancy Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive Redundancy Simulation</h2>

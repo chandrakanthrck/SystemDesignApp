@@ -10,7 +10,7 @@ function Idempotency() {
         This property is crucial for retrying network requests without causing unintended consequences.
       </p>
       <div className="idempotency-diagram">
-        <img src="path/to/idempotency-diagram.png" alt="Idempotency Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/idempotency-diagram.png`} alt="Idempotency Diagram" className="concept-image" />
       </div>
       <div className="examples-section">
         <h2>Examples of Idempotency</h2>

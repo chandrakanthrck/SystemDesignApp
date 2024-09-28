@@ -10,7 +10,7 @@ function WebSockets() {
         between clients and servers.
       </p>
       <div className="websocket-diagram">
-        <img src="path/to/websockets-diagram.png" alt="WebSockets Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/websockets-diagram.png`} alt="WebSockets Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Explore WebSockets</h2>

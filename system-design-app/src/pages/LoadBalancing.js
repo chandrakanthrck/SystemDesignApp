@@ -11,7 +11,7 @@ function LoadBalancing() {
         becomes overwhelmed with too much traffic.
       </p>
       <div className="lb-diagram">
-        <img src="path/to/load-balancing-diagram.png" alt="Load Balancing Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/load-balancing-diagram.png`} alt="Load Balancing Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Understanding Load Balancing</h2>

@@ -16,7 +16,7 @@ function ACIDTransactions() {
         reliable processing of database transactions, providing a framework for maintaining database 
         integrity.
       </p>
-      <img src="path/to/acid-transactions-diagram.png" alt="ACID Transactions Diagram" className="concept-image" />
+      <img src={`${process.env.PUBLIC_URL}/images/acid-transactions-diagram.png`} alt="ACID Transactions Diagram" className="concept-image" />
 
       <div className="interactive-section">
         <h3>Explore the ACID Properties</h3>

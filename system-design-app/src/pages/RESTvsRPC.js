@@ -10,7 +10,7 @@ function RESTvsRPC() {
         REST is resource-based, whereas RPC is more function-oriented, offering different trade-offs depending on use cases.
       </p>
       <div className="rest-rpc-diagram">
-        <img src="path/to/rest-vs-rpc-diagram.png" alt="REST vs RPC Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/rest-vs-rpc-diagram.png`} alt="REST vs RPC Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Comparison Table</h2>

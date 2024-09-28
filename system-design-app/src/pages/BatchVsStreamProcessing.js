@@ -11,7 +11,7 @@ function BatchVsStreamProcessing() {
         is better suited for scenarios like large-scale data aggregation or payroll systems.
       </p>
       <div className="batch-stream-diagram">
-        <img src="path/to/batch-vs-stream-diagram.png" alt="Batch vs Stream Processing Diagram" />
+        <img src={`${process.env.PUBLIC_URL}/images/batch-vs-stream-diagram.png`} alt="Batch vs Stream Processing Diagram" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Explore More</h3>

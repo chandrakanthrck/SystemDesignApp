@@ -10,7 +10,7 @@ function DistributedLocking() {
         It helps avoid conflicts by ensuring only one node can modify a resource at a time.
       </p>
       <div className="locking-diagram">
-        <img src="path/to/distributed-locking-diagram.png" alt="Distributed Locking Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/distributed-locking-diagram.png`} alt="Distributed Locking Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive Locking Simulation</h2>

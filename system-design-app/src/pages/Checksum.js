@@ -10,7 +10,7 @@ function Checksum() {
         It ensures data integrity by verifying that the content received matches the content sent.
       </p>
       <div className="checksum-diagram">
-        <img src="path/to/checksum-diagram.png" alt="Checksum Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/checksum-diagram.png`} alt="Checksum Diagram" className="concept-image" />
         {/* Replace with an actual image link or interactive diagram */}
       </div>
       <div className="interactive-section">

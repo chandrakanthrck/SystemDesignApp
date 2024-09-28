@@ -11,7 +11,7 @@ function DatabaseSharding() {
         is particularly useful when handling large amounts of data that need to be distributed efficiently.
       </p>
       <div className="sharding-diagram">
-        <img src="path/to/database-sharding-diagram.png" alt="Database Sharding Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/database-sharding-diagram.png`} alt="Database Sharding Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Interactive Sharding Simulation</h2>

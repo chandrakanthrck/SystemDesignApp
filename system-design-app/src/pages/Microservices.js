@@ -11,7 +11,7 @@ function MicroservicesArchitecture() {
         and scaling.
       </p>
       <div className="microservices-diagram">
-        <img src="path/to/microservices-architecture-diagram.png" alt="Microservices Architecture Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/microservices-architecture-diagram.png`} alt="Microservices Architecture Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h2>Key Features</h2>

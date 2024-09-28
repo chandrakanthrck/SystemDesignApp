@@ -12,7 +12,7 @@ function CAPTheorem() {
         that meet specific needs.
       </p>
       <div className="cap-diagram">
-        <img src="path/to/cap-theorem-diagram.png" alt="CAP Theorem Diagram" />
+        <img src={`${process.env.PUBLIC_URL}/images/cap-theorem-diagram.png`} alt="CAP Theorem Diagram" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Explore CAP Theorem in Action</h3>

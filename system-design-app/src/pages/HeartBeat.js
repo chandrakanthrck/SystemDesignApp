@@ -10,7 +10,7 @@ function HeartBeat() {
         between nodes to ensure everything is operational and responsive.
       </p>
       <div className="heartbeat-diagram">
-        <img src="path/to/heartbeat-diagram.png" alt="Heartbeat Mechanism Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/heartbeat-diagram.png`} alt="Heartbeat Mechanism Diagram" className="concept-image" />
       </div>
       <div className="heartbeat-simulation">
         <h2>Interactive HeartBeat Simulation</h2>

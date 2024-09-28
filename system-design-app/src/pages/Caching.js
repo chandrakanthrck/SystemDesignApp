@@ -11,7 +11,7 @@ function Caching() {
         performance by minimizing the time taken to access frequently requested data.
       </p>
       <div className="caching-diagram">
-        <img src="path/to/caching-diagram.png" alt="Caching Diagram" />
+        <img src={`${process.env.PUBLIC_URL}/images/caching-diagram.png`} alt="Caching Diagram" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Explore Caching Strategies</h3>

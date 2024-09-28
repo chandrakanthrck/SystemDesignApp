@@ -11,7 +11,7 @@ function DatabaseIndex() {
         significantly speed up query response times by reducing the number of rows that need to be scanned.
       </p>
       <div className="database-index-diagram">
-        <img src="path/to/database-index-diagram.png" alt="Database Index Diagram" className="concept-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/database-index-diagram.png`} alt="Database Index Diagram" className="concept-image" />
       </div>
       <div className="interactive-section">
         <h3 className="interactive-heading">Explore Index Types</h3>
