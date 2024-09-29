@@ -80,8 +80,35 @@ function StrongVsEventualConsistency() {
           <h2>Strong vs Eventual Consistency</h2>
           <p>
             Strong consistency ensures that after an update, any subsequent access to the data returns the most recent value. 
-            Eventual consistency means that data will eventually be consistent across all nodes, which works well for systems requiring high availability.
+            Eventual consistency means that data will eventually become consistent across all nodes, which works well for systems requiring high availability and partition tolerance.
           </p>
+
+          <h3>Understanding Strong Consistency</h3>
+          <p>
+            In strong consistency, any read operation will return the most recent write for a given piece of data. 
+            This is crucial for applications that cannot afford to see stale data, such as financial systems and inventory management.
+          </p>
+          <p>
+            For example, if a bank account balance is updated to reflect a deposit, any subsequent read must reflect this new balance immediately.
+          </p>
+
+          <h3>Understanding Eventual Consistency</h3>
+          <p>
+            Eventual consistency, on the other hand, allows for temporary inconsistencies across different nodes. 
+            While this may lead to a situation where different nodes return different values for a given key, the system guarantees that all updates will propagate and converge to the same value eventually.
+          </p>
+          <p>
+            This model is often used in distributed databases like DynamoDB and systems like social media platforms where immediate consistency is less critical.
+          </p>
+
+          <h3>Trade-offs Between Strong and Eventual Consistency</h3>
+          <p>
+            The choice between strong and eventual consistency often comes down to the requirements of your application:
+          </p>
+          <ul>
+            <li><strong>Use Strong Consistency:</strong> When your application needs guaranteed accuracy and real-time data access, such as banking and transaction systems.</li>
+            <li><strong>Use Eventual Consistency:</strong> When your application can tolerate temporary inconsistencies and prioritizes availability and partition tolerance, like social networks or content delivery networks.</li>
+          </ul>
 
           <h3>Interactive Examples</h3>
           <div className="consistency-example">

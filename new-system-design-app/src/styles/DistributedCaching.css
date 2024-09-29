@@ -16,7 +16,7 @@
   margin-bottom: 30px;
 }
 
-.caching-description {
+.caching-content {
   font-size: 18px;
   line-height: 1.8;
   color: #34495e;
@@ -33,6 +33,12 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.caching-diagram img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .interactive-section {

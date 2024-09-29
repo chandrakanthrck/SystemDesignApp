@@ -1,5 +1,3 @@
-/* styles/Checksum.css */
-
 .checksum-container {
   padding: 40px;
   max-width: 900px;
@@ -96,4 +94,44 @@
   color: #718096;
   text-align: center;
   font-size: 1.1em;
+}
+
+.quiz-section {
+  margin-top: 30px;
+}
+
+.quiz-button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quiz-button:hover {
+  background-color: #2b6cb0;
+}
+
+.reference-links {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #edf2f7;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reference-links h3 {
+  margin-bottom: 15px;
+}
+
+.reference-links ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.reference-links li {
+  margin-bottom: 10px;
 }

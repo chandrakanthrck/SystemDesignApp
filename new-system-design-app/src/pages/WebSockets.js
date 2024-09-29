@@ -80,14 +80,37 @@ function WebSockets() {
           <h2>WebSockets</h2>
           <p>
             WebSockets provide full-duplex communication channels over a single TCP connection, enabling real-time, interactive communication 
-            between clients and servers.
+            between clients and servers. Unlike HTTP, which is request-response based, WebSockets allow for persistent connections that facilitate
+            instant data transfer.
           </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>Full-Duplex Communication:</strong> Both the client and server can send messages independently, improving responsiveness.</li>
+            <li><strong>Low Latency:</strong> Messages are transmitted immediately, making WebSockets ideal for applications requiring real-time updates.</li>
+            <li><strong>Efficient Resource Utilization:</strong> Only one connection is used for multiple requests, reducing overhead compared to traditional HTTP.</li>
+          </ul>
 
           <h3>Use Cases</h3>
           <ul>
             <li>Real-time chat applications that require instant message delivery between users.</li>
             <li>Stock tickers that provide up-to-date financial data to users.</li>
             <li>Online multiplayer games where latency must be minimized for a better experience.</li>
+            <li>Collaborative editing applications that require live updates as users type.</li>
+          </ul>
+
+          <h3>How WebSockets Work</h3>
+          <p>
+            WebSockets work through a handshake process initiated by the client using the HTTP protocol. Once the handshake is successful,
+            the protocol switches from HTTP to WebSocket, and a persistent connection is established. This connection allows for continuous
+            two-way data exchange without needing to reopen connections.
+          </p>
+
+          <h3>Benefits of Using WebSockets</h3>
+          <ul>
+            <li>Reduced latency and bandwidth usage compared to traditional HTTP requests.</li>
+            <li>Improved user experience in real-time applications.</li>
+            <li>Flexibility in data formats, as WebSockets can transmit text and binary data.</li>
           </ul>
         </motion.div>
       )}

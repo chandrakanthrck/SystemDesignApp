@@ -1,28 +1,102 @@
+/* General Container */
 .dns-container {
   padding: 50px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  background-color: #f3f7fa;
+  background-color: #f3f7fa; /* Light blueish background for a comfortable reading experience */
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.dns-header {
-  font-size: 36px;
+.dns-container:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Top Navigation Bar */
+.top-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.top-bar button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db; /* Primary blue color for buttons */
+  color: #ffffff;
+  cursor: pointer;
   font-weight: bold;
-  color: #34495e;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.top-bar button:hover {
+  background-color: #2980b9; /* Darker blue for hover effect */
+  transform: translateY(-3px);
+}
+
+.top-bar button.active {
+  background-color: #2ecc71; /* Green color to indicate the active section */
+}
+
+/* Header Section */
+.dns-header {
+  font-size: 34px;
+  font-weight: bold;
+  color: #2c3e50; /* Dark blue-gray color for contrast */
   text-align: center;
   margin-bottom: 30px;
 }
 
-.dns-description {
+/* Content Section */
+.dns-content {
   font-size: 18px;
   line-height: 1.8;
-  color: #2c3e50;
+  color: #34495e; /* A comfortable-to-read color */
   text-align: justify;
+  margin-bottom: 25px;
 }
 
+.dns-content h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.dns-content h3 {
+  font-size: 24px;
+  color: #2980b9;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.dns-content h4 {
+  font-size: 20px;
+  color: #3498db;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.dns-content p {
+  margin-bottom: 20px;
+}
+
+.dns-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.dns-content li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Diagram Styles */
 .dns-diagram {
   margin: 30px 0;
   text-align: center;
@@ -33,83 +107,88 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.interactive-section {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: #ffffff;
+.dns-diagram img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Quiz Section */
+.quiz-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the quiz */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-.interactive-section h2 {
-  font-size: 28px;
-  color: #3498db;
+.quiz-section h3 {
+  font-size: 24px;
+  color: #2c3e50;
   margin-bottom: 20px;
 }
 
-.simulation-button {
-  padding: 14px 28px;
-  background-color: #3498db;
+.question-container {
+  margin: 20px 0;
+}
+
+.quiz-button {
+  padding: 12px 25px;
+  margin: 10px;
+  background-color: #e67e22; /* Orange button for quiz */
   color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
-.simulation-button:hover {
-  background-color: #2980b9;
+.quiz-button:hover {
+  background-color: #d35400; /* Darker orange on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.dns-visuals {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: #eaf2f8;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.dns-visuals h2 {
-  font-size: 28px;
-  color: #9b59b6;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.dns-visuals p {
-  font-size: 16px;
-  color: #2c3e50;
-  text-align: justify;
-}
-
-.buttons-container {
+.quiz-results {
   margin-top: 30px;
-  display: flex;
-  justify-content: space-evenly;
+  font-size: 20px;
+  color: #16a085; /* Green color for quiz results */
 }
 
-.action-button {
-  padding: 14px 24px;
-  background-color: #27ae60;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Resources Section */
+.reference-links {
+  padding: 30px;
+  background-color: #f9fbfd; /* Slightly darker background for resources */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.action-button:hover {
-  background-color: #229954;
+.reference-links h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-.dns-footer {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 16px;
-  color: #95a5a6;
+.reference-links ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.reference-links li {
+  margin: 15px 0;
+}
+
+.reference-links a {
+  font-size: 18px;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.reference-links a:hover {
+  color: #2980b9;
+  text-decoration: underline;
 }

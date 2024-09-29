@@ -5,7 +5,7 @@ import cdnQuestions from '../data/CDNQuestions'; // Import the questions from th
 
 function CDN() {
   // State for showing sections
-  const [activeSection, setActiveSection] = useState('diagram');
+  const [activeSection, setActiveSection] = useState('content');
   
   // Quiz state
   const [questions, setQuestions] = useState([]);
@@ -61,24 +61,40 @@ function CDN() {
         >
           <h2>Content Delivery Network (CDN)</h2>
           <p>
-            Imagine that you are hosting a party and you want to serve ice cream to your guests. 
-            You could either store all the ice cream in a central freezer in your kitchen, or you could have 
-            mini freezers distributed across various parts of the house. Now, if everyone has to get ice cream 
-            only from the kitchen, it could take a long time for everyone to get served, and it could lead to bottlenecks.
+            A <strong>Content Delivery Network (CDN)</strong> is a system of distributed servers that work together to deliver web content more efficiently to users. Instead of relying on a single server to deliver the entire website or media files, CDNs cache content in multiple servers globally. This setup ensures faster load times, lower latency, and improved user experience.
           </p>
           <p>
-            A CDN (Content Delivery Network) works similarly to those mini freezers: it is a network of servers distributed 
-            across different locations worldwide, which helps users access content faster by serving it from a nearby server 
-            instead of a central one. This improves load times and ensures that all users get a great experience, regardless 
-            of where they are located.
+            Imagine hosting a party and storing ice cream in multiple mini freezers spread across your house, instead of only keeping it in your kitchen. This way, guests can access the ice cream without everyone having to go to the kitchen, reducing congestion and ensuring everyone is served quickly.
           </p>
-          <h3>Benefits of Using a CDN</h3>
+          <h3>How Does a CDN Work?</h3>
+          <p>
+            CDNs store cached versions of your website's assets, such as images, videos, HTML pages, JavaScript, and CSS files, across multiple servers in different geographical locations. When a user requests a piece of content, the CDN redirects the request to the nearest server, reducing the distance the data needs to travel, thereby improving load times.
+          </p>
+          <p>
+            For example, if a user from London requests an image from your website, the CDN will serve that image from a server in London, rather than having to request it from a server in New York. This significantly reduces latency and improves the user's experience.
+          </p>
+          <h3>Key Benefits of CDNs</h3>
           <ul>
-            <li><strong>Improved Performance:</strong> Since content is served from a closer location, users experience faster loading speeds.</li>
-            <li><strong>Reduced Latency:</strong> Latency is reduced because the server that delivers the data is geographically closer to the user.</li>
-            <li><strong>Scalability:</strong> Handling spikes in traffic becomes easier, as content delivery is distributed across multiple servers.</li>
-            <li><strong>Security Enhancements:</strong> CDNs can help mitigate DDoS attacks and provide additional security features.</li>
+            <li>
+              <strong>Reduced Latency:</strong> The shorter the distance between the server and the end-user, the faster the delivery of content. CDNs help reduce latency by serving content from servers closer to the user.
+            </li>
+            <li>
+              <strong>Improved Performance:</strong> By caching content at multiple points around the world, CDNs help reduce the workload on the origin server, ensuring users experience faster page load times.
+            </li>
+            <li>
+              <strong>Scalability:</strong> Handling traffic spikes becomes easier, as content delivery is spread across multiple servers, allowing for seamless scalability during high-traffic events.
+            </li>
+            <li>
+              <strong>Enhanced Security:</strong> CDNs provide an additional layer of security by masking the origin server’s IP address. They also help mitigate DDoS attacks by distributing the load across multiple servers.
+            </li>
           </ul>
+          <h3>Real-World Examples of CDNs</h3>
+          <p>
+            Popular companies like Netflix, Amazon, and YouTube rely on CDNs to deliver video content quickly and efficiently to users all around the world. By using a CDN, these companies are able to provide a seamless streaming experience, even during peak times.
+          </p>
+          <p>
+            Many websites also use CDNs for serving static assets like images, stylesheets, and JavaScript files. This helps them improve page load speeds and offer a smoother user experience, especially for users from various regions.
+          </p>
         </motion.div>
       )}
 

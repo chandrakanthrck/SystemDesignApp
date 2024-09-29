@@ -86,10 +86,33 @@ function SQLvsNoSQL() {
         >
           <h2>SQL vs NoSQL</h2>
           <p>
-            SQL databases are relational and structured, while NoSQL databases are non-relational and 
-            offer more flexibility for unstructured data. Choosing between them depends on application 
-            needs and data requirements.
+            SQL (Structured Query Language) databases are relational, structured, and enforce a schema, 
+            while NoSQL (Not Only SQL) databases are non-relational, schema-less, and provide flexibility for 
+            storing unstructured data. Understanding the strengths and weaknesses of each type can guide your 
+            decision based on specific use cases.
           </p>
+
+          <h3>When to Use SQL</h3>
+          <p>
+            SQL databases are ideal for applications requiring:
+          </p>
+          <ul>
+            <li>Complex queries and transactions.</li>
+            <li>Data integrity and ACID compliance.</li>
+            <li>Structured data with a predefined schema.</li>
+            <li>Reporting and analytical tasks that benefit from SQL queries.</li>
+          </ul>
+
+          <h3>When to Use NoSQL</h3>
+          <p>
+            NoSQL databases are suitable for applications needing:
+          </p>
+          <ul>
+            <li>Horizontal scaling to handle large volumes of unstructured data.</li>
+            <li>Flexible data models that can evolve over time.</li>
+            <li>Fast data access with varying consistency models.</li>
+            <li>Real-time analytics and high-velocity data streams.</li>
+          </ul>
 
           <h3>Comparison Table</h3>
           <table className="compare-table">
@@ -126,7 +149,9 @@ function SQLvsNoSQL() {
 
           <h3>Understanding Trade-offs</h3>
           <p>
-            SQL is ideal for structured data and complex queries, while NoSQL provides flexibility and scalability for unstructured data.
+            SQL databases are ideal for structured data and complex queries, while NoSQL provides flexibility 
+            and scalability for unstructured data. Consider the nature of your data and access patterns when choosing 
+            between SQL and NoSQL.
           </p>
         </motion.div>
       )}

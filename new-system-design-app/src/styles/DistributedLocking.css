@@ -1,28 +1,38 @@
+/* Container Styles */
 .locking-container {
   padding: 50px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  background-color: #f9fafb;
+  background-color: #f9fafb; /* Soft white background for readability */
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Helvetica Neue', sans-serif;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+.locking-container:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Section */
 .locking-header {
-  font-size: 36px;
+  font-size: 34px;
   font-weight: bold;
-  color: #2c3e50;
+  color: #2c3e50; /* Dark blue-gray for contrast */
   text-align: center;
   margin-bottom: 30px;
 }
 
-.locking-description {
+/* Description Section */
+.locking-content {
   font-size: 18px;
   line-height: 1.8;
-  color: #34495e;
+  color: #34495e; /* A comfortable-to-read dark color */
   text-align: justify;
+  margin-bottom: 25px;
 }
 
+/* Diagram Styles */
 .locking-diagram {
   margin: 30px 0;
   text-align: center;
@@ -33,49 +43,65 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.locking-diagram img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Interactive Section */
 .interactive-section {
   margin-top: 40px;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #ffffff; /* White background for interactive content */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.interactive-section:hover {
+  background-color: #f7f9fb;
 }
 
 .interactive-section h2 {
   font-size: 28px;
-  color: #e74c3c;
+  color: #e74c3c; /* Red for emphasis */
   margin-bottom: 20px;
 }
 
+/* Button Styles */
 .locking-simulation-button {
   padding: 14px 28px;
-  background-color: #e74c3c;
+  background-color: #e74c3c; /* Red button to draw attention */
   color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
 .locking-simulation-button:hover {
-  background-color: #c0392b;
+  background-color: #c0392b; /* Darker shade of red on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Visuals Section */
 .locking-visuals {
   margin-top: 40px;
   padding: 30px;
-  background-color: #ecf0f1;
+  background-color: #ecf0f1; /* Light gray for subtle emphasis */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .locking-visuals h2 {
   font-size: 28px;
-  color: #2980b9;
+  color: #2980b9; /* Blue for headings */
   text-align: center;
   margin-bottom: 15px;
 }
@@ -86,6 +112,111 @@
   text-align: justify;
 }
 
+/* Top Navigation Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f4f6f8; /* Light gray background */
+  padding: 15px 0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.top-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.top-bar button:hover {
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+.top-bar button.active {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* Quiz Section */
+.quiz-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.question-container {
+  margin: 20px 0;
+}
+
+.quiz-button {
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #3498db; /* Blue for quiz buttons */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #2980b9; /* Darker blue for hover state */
+  transform: translateY(-3px);
+}
+
+.quiz-results {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #27ae60; /* Green for positive feedback */
+  font-weight: bold;
+}
+
+/* Reference Links */
+.reference-links {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f7f9fb;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reference-links h3 {
+  font-size: 24px;
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+.reference-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reference-links li {
+  margin-bottom: 10px;
+}
+
+.reference-links a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+.reference-links a:hover {
+  color: #2980b9; /* Darker blue for hover */
+}
+
+/* Buttons Container */
 .buttons-container {
   margin-top: 30px;
   display: flex;
@@ -94,7 +225,7 @@
 
 .action-button {
   padding: 14px 24px;
-  background-color: #3498db;
+  background-color: #3498db; /* Blue for additional actions */
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -107,9 +238,10 @@
   background-color: #2980b9;
 }
 
+/* Footer Section */
 .locking-footer {
   margin-top: 60px;
   text-align: center;
   font-size: 16px;
-  color: #95a5a6;
+  color: #95a5a6; /* Light gray for the footer */
 }

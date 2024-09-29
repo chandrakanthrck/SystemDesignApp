@@ -12,17 +12,9 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.scaling-header {
-  font-size: 34px;
-  font-weight: bold;
-  color: #2d3436;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.scaling-description {
-  font-size: 18px;
-  line-height: 1.6;
+.scaling-content {
+  font-size: 1.2em;
+  line-height: 1.8;
   color: #34495e;
   text-align: justify;
   margin-bottom: 20px;
@@ -74,50 +66,6 @@
 
 .scaling-simulation-button:hover {
   background-color: #219150;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.scaling-types-section {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: #ecf0f1;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.scaling-types-section h3 {
-  font-size: 26px;
-  color: #2980b9;
-  margin-bottom: 15px;
-}
-
-.scaling-types-section p {
-  font-size: 16px;
-  color: #2c3e50;
-  line-height: 1.8;
-}
-
-.scaling-buttons-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.scaling-action-button {
-  padding: 14px 24px;
-  background-color: #2980b9;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
-}
-
-.scaling-action-button:hover {
-  background-color: #1f6691;
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }

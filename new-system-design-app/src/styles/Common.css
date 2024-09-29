@@ -1,0 +1,16 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-left: 260px; /* To account for NavBar width */
+  }
+  
+  .content-container {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #f9f9f9; /* Subtle background for content */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give a card-like appearance */
+  }
+  

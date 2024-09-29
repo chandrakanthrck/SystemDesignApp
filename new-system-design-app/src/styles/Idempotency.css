@@ -1,11 +1,16 @@
 .idempotency-container {
   padding: 50px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   background-color: #f3f8fd;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Roboto', sans-serif;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.idempotency-container:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .idempotency-header {
@@ -21,6 +26,30 @@
   line-height: 1.8;
   color: #34495e;
   text-align: justify;
+  margin-bottom: 20px;
+}
+
+.analogy-section,
+.use-cases-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.analogy-section h2,
+.use-cases-section h2 {
+  font-size: 28px;
+  color: #1abc9c;
+  margin-bottom: 20px;
+}
+
+.use-cases-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+  color: #2c3e50;
 }
 
 .idempotency-diagram {
@@ -33,98 +62,71 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.examples-section {
+.idempotency-diagram img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-section {
   margin-top: 40px;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.examples-section h2 {
-  font-size: 28px;
-  color: #1abc9c;
-  margin-bottom: 20px;
-}
-
-.examples-section p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #2c3e50;
-}
-
-.interactive-section {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: #eef2f7;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.interactive-section h2 {
-  font-size: 28px;
-  color: #e74c3c;
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.idempotency-quiz-button {
+.quiz-button {
   padding: 14px 28px;
+  margin: 10px;
   background-color: #e74c3c;
   color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
-.idempotency-quiz-button:hover {
+.quiz-button:hover {
   background-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.idempotency-visuals {
+.quiz-results {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #16a085;
+}
+
+.reference-links {
   margin-top: 50px;
-  padding: 20px;
-  background-color: #f0f4f8;
+  padding: 30px;
+  background-color: #eef2f7;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.idempotency-visuals h2 {
-  font-size: 28px;
-  color: #9b59b6;
-  text-align: center;
-  margin-bottom: 15px;
+.reference-links h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-.idempotency-visuals p {
-  font-size: 16px;
-  color: #34495e;
-  text-align: justify;
+.reference-links a {
+  font-size: 18px;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.buttons-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.action-button {
-  padding: 14px 24px;
-  background-color: #3498db;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.action-button:hover {
-  background-color: #2980b9;
+.reference-links a:hover {
+  color: #2980b9;
+  text-decoration: underline;
 }
 
 .idempotency-footer {
@@ -132,4 +134,7 @@
   text-align: center;
   font-size: 16px;
   color: #95a5a6;
+  padding: 20px;
+  background-color: #f3f8fd;
+  border-radius: 12px;
 }

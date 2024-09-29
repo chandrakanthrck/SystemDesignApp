@@ -1,4 +1,6 @@
-/* src/styles/NavBar.css */
+/* styles/NavBar.css */
+
+/* Navigation Container */
 .navigation {
   background-color: #2d3748; /* Dark background for contrast */
   padding: 20px;
@@ -19,7 +21,6 @@
   padding: 0;
   margin: 0; /* Removed margin-top for better control of spacing */
   flex-grow: 1; /* Allow the navigation list to grow */
-  overflow-y: auto; /* Allow scrolling if the list exceeds height */
 }
 
 /* Navigation List Items */
@@ -63,6 +64,12 @@
   transition: transform 0.3s ease-in-out, color 0.3s ease;
 }
 
+.tagline {
+  font-size: 0.9em;
+  color: #a0aec0; /* Subtle color for the tagline */
+  margin-top: 5px;
+}
+
 .logo:hover {
   transform: scale(1.05); /* Slight scaling effect */
   color: #38b2ac; /* Color change for hover emphasis */
@@ -71,11 +78,11 @@
 /* Responsive Improvements */
 @media (max-height: 600px) {
   .navigation {
-      padding: 10px; /* Adjust padding for small screens */
+    padding: 10px; /* Adjust padding for small screens */
   }
 
   .nav-link {
-      padding: 8px 10px; /* Reduced padding for smaller screens */
-      font-size: 1em; /* Adjust font size for better fit */
+    padding: 8px 10px; /* Reduced padding for smaller screens */
+    font-size: 1em; /* Adjust font size for better fit */
   }
 }

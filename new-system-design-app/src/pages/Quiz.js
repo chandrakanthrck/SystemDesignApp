@@ -1,6 +1,6 @@
-// src/pages/Quiz.js
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import '../styles/Quiz.css';
 import ACIDQuestions from '../data/ACIDQuestions';
 import CAPTheoremQuestions from '../data/CAPTheoremQuestions';
 import CDNQuestions from '../data/CDNQuestions';
@@ -31,6 +31,8 @@ import BatchVsStreamQuestions from '../data/BatchVsStreamQuestions';
 
 const Quiz = () => {
   const { topic } = useParams(); // Get the topic from URL
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [score, setScore] = useState(0);
 
   // Mapping topics to their respective questions
   const quizData = {
@@ -65,17 +67,39 @@ const Quiz = () => {
 
   const questions = quizData[topic]; // Access the relevant questions
 
+  const handleAnswer = (isCorrect) => {
+    if (isCorrect) {
+      setScore(score + 1);
+    }
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      alert(`Quiz Finished! Your score: ${score + (isCorrect ? 1 : 0)} out of ${questions.length}`);
+      // Resetting quiz for the same topic
+      setCurrentQuestionIndex(0);
+      setScore(0);
+    }
+  };
+
   return (
     <div>
       <h2>{topic.replace(/-/g, ' ')} Quiz</h2>
-      {/* Add your quiz logic here using the `questions` array */}
       {questions ? (
-        questions.map((question, index) => (
-          <div key={index}>
-            <p>{question.text}</p>
-            {/* Add answer options and handling logic here */}
+        <div>
+          <h3>Question {currentQuestionIndex + 1} of {questions.length}</h3>
+          <p>{questions[currentQuestionIndex].text}</p>
+          <div>
+            {questions[currentQuestionIndex].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option.isCorrect)}
+                className="quiz-option-button"
+              >
+                {option.text}
+              </button>
+            ))}
           </div>
-        ))
+        </div>
       ) : (
         <p>No questions available for this topic.</p>
       )}

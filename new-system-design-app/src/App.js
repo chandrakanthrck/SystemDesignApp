@@ -1,5 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import './styles/App.css';
 
@@ -33,11 +35,12 @@ import ConsensusAlgorithms from './pages/ConsensusAlgorithms';
 import APIGateway from './pages/APIGateway';
 import DistributedLocking from './pages/DistributedLocking';
 import Checksum from './pages/Checksum';
-import Quiz from './pages/Quiz'; // Import the new Quiz component
+import Quiz from './pages/Quiz';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <NavBar />
       <div className="content">
         <Routes>
@@ -71,9 +74,10 @@ function App() {
           <Route path="/api-gateway" element={<APIGateway />} />
           <Route path="/distributed-locking" element={<DistributedLocking />} />
           <Route path="/checksum" element={<Checksum />} />
-          <Route path="/quiz/:topic" element={<Quiz />} /> {/* Quiz route for specific topics */}
+          <Route path="/quiz/:topic" element={<Quiz />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

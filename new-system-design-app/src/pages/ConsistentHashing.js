@@ -5,7 +5,7 @@ import consistentHashingQuestions from '../data/ConsistentHashingQuestions'; // 
 
 function ConsistentHashing() {
   // State for showing sections
-  const [activeSection, setActiveSection] = useState('diagram');
+  const [activeSection, setActiveSection] = useState('content');
   
   // Quiz state
   const [questions, setQuestions] = useState([]);
@@ -85,23 +85,58 @@ function ConsistentHashing() {
         >
           <h2>Consistent Hashing</h2>
           <p>
-            <strong>Consistent hashing</strong> is a technique used to distribute data across nodes in a distributed system 
-            with minimal disruption when nodes are added or removed. It helps maintain load balancing and ensure data 
-            consistency, especially in systems that frequently scale up or down.
+            <strong>Consistent hashing</strong> is a hashing technique primarily used in distributed systems to evenly distribute data across nodes while minimizing the need for reorganization when the system scales up or down. Consistent hashing plays an important role in systems that require high availability and scalability, such as distributed caching systems or peer-to-peer networks.
           </p>
           <h3>Real-World Analogy</h3>
           <p>
-            Imagine you are running a delivery service with multiple delivery trucks. Each truck is responsible for a 
-            specific set of deliveries based on a predefined route. If a new truck is added, consistent hashing allows 
-            you to reassign only a small number of deliveries to the new truck rather than redistributing all deliveries. 
-            This ensures minimal disruption and efficient use of resources.
+            Imagine you are managing a delivery service with multiple trucks. Each truck is responsible for specific deliveries based on a predefined route. Suppose you need to add a new truck to expand your delivery capacity. In a traditional hashing system, you would have to redistribute all the deliveries to accommodate the new truck, which is quite inefficient. In contrast, with consistent hashing, you only need to reassign a small number of deliveries, ensuring minimal disruption. This approach ensures efficiency and stability when adding or removing trucks (or nodes).
+          </p>
+          <h3>How Does Consistent Hashing Work?</h3>
+          <p>
+            In consistent hashing, all nodes (e.g., servers) are arranged in a circular structure, often called a hash ring. Data is mapped to positions on the ring based on hash values, and each node is also mapped to the same ring. When a node receives a piece of data, it looks for the closest node in a clockwise direction on the hash ring. This ensures even data distribution and easy lookup.
+          </p>
+          <p>
+            When a node is added to or removed from the system, consistent hashing ensures that only a small subset of data needs to be redistributed among nodes. This minimizes disruptions compared to traditional hashing methods, where changes in the number of nodes require extensive data reorganization.
           </p>
           <h3>Benefits of Consistent Hashing</h3>
           <ul>
-            <li>Minimizes data reorganization during scaling events.</li>
-            <li>Effective for balancing load in a distributed system.</li>
-            <li>Popularly used in distributed caching and peer-to-peer (P2P) networks.</li>
+            <li>
+              <strong>Scalability:</strong> Adding or removing nodes results in minimal redistribution of keys, allowing for seamless scaling without affecting the entire data set.
+            </li>
+            <li>
+              <strong>Load Balancing:</strong> Consistent hashing ensures that data is evenly distributed across available nodes, preventing some nodes from being overloaded while others are underutilized.
+            </li>
+            <li>
+              <strong>High Availability:</strong> Because consistent hashing requires minimal data redistribution, nodes can be added or removed with minimal impact on data availability, ensuring reliability in the system.
+            </li>
           </ul>
+          <h3>Consistent Hashing in Distributed Caching</h3>
+          <p>
+            Consistent hashing is widely used in distributed caching systems like <strong>Memcached</strong> or <strong>Amazon DynamoDB</strong>. In these systems, cache nodes are distributed across different servers, and data is cached according to hash values. When a new cache server is added, consistent hashing ensures only a small portion of cached data needs to be rehashed, ensuring minimal downtime.
+          </p>
+          <p>
+            For example, in a system where user sessions are cached, adding a new cache node without consistent hashing would mean that most users could lose their cached sessions, causing disruptions. With consistent hashing, the impact of adding or removing a node is minimized, which makes it ideal for applications that need to remain available without disruptions.
+          </p>
+          <h3>Consistent Hashing vs. Traditional Hashing</h3>
+          <p>
+            In traditional hashing techniques, a change in the number of nodes requires rehashing all the keys, leading to significant computational overhead. Imagine you have ten nodes, and you add one more. In a traditional setup, every key would need to be remapped to the new number of nodes, causing all data to be reassigned. With consistent hashing, only a small subset of keys needs to be reassigned, significantly reducing overhead and making it practical for systems that change frequently.
+          </p>
+          <h3>Real-World Example</h3>
+          <p>
+            Consider the <strong>Chord Protocol</strong>, a well-known implementation of consistent hashing used in peer-to-peer (P2P) networks. Chord helps locate the node responsible for storing a particular piece of data in a dynamic network, where nodes frequently join or leave. The use of consistent hashing ensures that changes to the network result in minimal movement of data, allowing the P2P system to remain stable.
+          </p>
+          <h3>Challenges with Consistent Hashing</h3>
+          <p>
+            Despite its advantages, consistent hashing comes with a few challenges:
+          </p>
+          <ul>
+            <li><strong>Hot Spots:</strong> Inconsistent load distribution can occur if nodes are not evenly distributed around the hash ring, leading to "hot spots" where certain nodes handle more traffic than others. This can be mitigated by using "virtual nodes," where each physical node is mapped to multiple points on the hash ring.</li>
+            <li><strong>Node Coordination:</strong> In systems with many nodes, managing coordination between nodes can become complex. Algorithms like <strong>Gossip Protocols</strong> are often used to maintain state information between nodes and ensure efficient communication.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>
+            Consistent hashing is a powerful and efficient mechanism for managing data distribution in distributed systems, ensuring scalability, minimal data redistribution, and load balancing. It plays a vital role in distributed caching, peer-to-peer networks, and other dynamic environments where nodes frequently join or leave the system. By understanding consistent hashing, developers can create distributed systems that are resilient, scalable, and can handle changes without compromising performance.
+          </p>
         </motion.div>
       )}
 
@@ -152,3 +187,4 @@ function ConsistentHashing() {
 }
 
 export default ConsistentHashing;
+

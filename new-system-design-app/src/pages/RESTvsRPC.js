@@ -85,8 +85,22 @@ function RESTvsRPC() {
         >
           <h2>REST vs RPC</h2>
           <p>
-            REST (Representational State Transfer) and RPC (Remote Procedure Call) are two styles for API design.
-            REST is resource-based, while RPC is more function-oriented, offering different trade-offs depending on use cases.
+            REST (Representational State Transfer) and RPC (Remote Procedure Call) are two prominent architectural styles for building APIs.
+            Understanding their differences is crucial for selecting the right approach for your application needs.
+          </p>
+
+          <h3>Understanding REST</h3>
+          <p>
+            REST is an architectural style that uses standard HTTP methods (GET, POST, PUT, DELETE) for operations. 
+            It is resource-oriented, meaning it focuses on entities (resources) and their representations. 
+            RESTful APIs typically return data in JSON or XML formats, making them easy to consume by various clients.
+          </p>
+          
+          <h3>Understanding RPC</h3>
+          <p>
+            RPC is a protocol that allows a client to execute a procedure on a server as if it were a local call. 
+            It is function-oriented, often requiring clients to know the methods available on the server. 
+            RPC can be more efficient for specific operations, as it may use binary protocols, reducing the amount of data transferred.
           </p>
 
           <h3>Comparison Table</h3>
@@ -119,9 +133,21 @@ function RESTvsRPC() {
 
           <h3>Understanding Trade-offs</h3>
           <p>
-            REST is ideal for applications that need scalability, readability, and a simple client-server interaction model.
-            RPC, on the other hand, is preferred when low latency and high efficiency are key, such as in microservice communication.
+            When to use REST:
           </p>
+          <ul>
+            <li>Applications that require a stateless interaction and scalability.</li>
+            <li>APIs where caching responses can improve performance.</li>
+            <li>Web services that require a uniform interface and easy discovery of resources.</li>
+          </ul>
+          <p>
+            When to use RPC:
+          </p>
+          <ul>
+            <li>Applications requiring high performance with lower latency, such as microservices communicating internally.</li>
+            <li>Use cases where complex data types and operations are involved, benefiting from binary serialization.</li>
+            <li>Scenarios where tight coupling between client and server is acceptable.</li>
+          </ul>
         </motion.div>
       )}
 

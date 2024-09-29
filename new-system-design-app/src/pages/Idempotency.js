@@ -47,7 +47,8 @@ function Idempotency() {
         transition={{ duration: 1 }}
       >
         Idempotency refers to an operation's ability to produce the same result, regardless of how many times it is executed.
-        This property is crucial for retrying network requests without causing unintended consequences.
+        This property is crucial for retrying network requests without causing unintended consequences, ensuring data integrity
+        and preventing duplicate effects.
       </motion.p>
 
       {/* Real-World Analogy Section */}
@@ -62,6 +63,34 @@ function Idempotency() {
           Imagine a light switch. Flipping the light switch "on" once will turn on the light, and flipping it "on" again will have no additional effect—it remains on.
           This behavior is like an idempotent operation: applying it multiple times has the same effect as applying it once.
         </p>
+      </motion.div>
+
+      {/* Use Cases Section */}
+      <motion.div
+        className="use-cases-section"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 1 }}
+      >
+        <h2>Practical Use Cases</h2>
+        <p>
+          In distributed systems, idempotency is particularly useful when it comes to handling retries. Network requests are prone to
+          failures, and retrying failed requests is common. Without idempotency, repeated requests could lead to inconsistent states, such as
+          multiple debit transactions from a bank account. With idempotency, the outcome remains the same, no matter how many times the action
+          is attempted.
+        </p>
+        <h3>Common Examples in Software Development</h3>
+        <ul>
+          <li>
+            <strong>HTTP Methods:</strong> HTTP GET, PUT, and DELETE are typically idempotent by design, meaning the same request made multiple times results in the same state.
+          </li>
+          <li>
+            <strong>Bank Transactions:</strong> Marking a bank transaction as "processed" only once, even if the request is accidentally repeated.
+          </li>
+          <li>
+            <strong>API Calls:</strong> A payment service API that can be retried without charging the user multiple times, ensuring data consistency.
+          </li>
+        </ul>
       </motion.div>
 
       {/* Animated Diagram */}
@@ -132,27 +161,9 @@ function Idempotency() {
         </ul>
       </motion.div>
 
-      {/* Action Buttons Section */}
-      <div className="buttons-container">
-        <motion.button
-          className="action-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Learn More About API Design
-        </motion.button>
-        <motion.button
-          className="action-button"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Explore Retry Mechanisms
-        </motion.button>
-      </div>
-
       {/* Footer Section */}
       <div className="idempotency-footer">
-        Understanding idempotency helps in building robust and reliable systems, especially in microservices architecture.
+        Understanding idempotency helps in building robust and reliable systems, especially in distributed systems and microservices.
       </div>
     </div>
   );

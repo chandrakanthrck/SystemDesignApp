@@ -46,7 +46,7 @@ a {
 
 a:hover {
     color: #0056a3; /* A darker shade to emphasize hover effect */
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover */
 }
 
 button {
@@ -99,7 +99,6 @@ code {
     background-color: #f1f1f1;
     padding: 5px;
     font-size: 0.95em;
-    border-radius: 4px;
 }
 
 pre {
@@ -107,12 +106,52 @@ pre {
     padding: 15px;
     border-radius: 5px;
     color: #f8f8f2; /* Light text for better readability on dark background */
-    overflow-x: auto;
-    font-size: 0.9em;
 }
 
 /* Smooth transition effect for the entire application */
 * {
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
+}
+
+/* Accessibility Focus Styles */
+button:focus,
+a:focus {
+    outline: 2px solid #007acc; /* Blue outline for focused elements */
+}
+
+/* Form Element Styles */
+input, textarea, select {
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007acc; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+    background-color: #181818; /* Dark background */
+    color: #f5f5f5; /* Light text */
+}
+
+.dark-mode button {
+    background-color: #444; /* Darker button */
+    color: #f5f5f5;
+}
+
+/* Additional Styles for Forms */
+button[type="submit"] {
+    background-color: #28a745; /* Green background for submit buttons */
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Darker green on hover */
 }

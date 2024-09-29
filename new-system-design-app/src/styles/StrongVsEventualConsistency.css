@@ -62,39 +62,30 @@
   color: #34495e;
 }
 
-.consistency-toggle {
+.buttons-container {
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.consistency-toggle button {
-  padding: 12px 18px;
-  margin: 5px;
-  background-color: #f39c12;
-  color: white;
+.action-button {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.consistency-toggle button:hover {
-  background-color: #e67e22;
+.action-button:hover {
+  background-color: #2980b9;
 }
 
-.consistency-info {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #16a085;
-  font-weight: bold;
+.consistency-footer {
+  margin-top: 50px;
   text-align: center;
-}
-
-.consistency-info.strong {
-  color: #c0392b;
-}
-
-.consistency-info.eventual {
-  color: #27ae60;
+  font-size: 16px;
+  color: #7f8c8d;
 }

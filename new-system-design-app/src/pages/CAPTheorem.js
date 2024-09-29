@@ -34,26 +34,26 @@ function CAPTheorem() {
     <div className="cap-container">
       {/* Top Navigation Bar */}
       <div className="top-bar">
-        <button 
-          className={activeSection === 'diagram' ? 'active' : ''} 
+        <button
+          className={activeSection === 'diagram' ? 'active' : ''}
           onClick={() => setActiveSection('diagram')}
         >
           Diagram
         </button>
-        <button 
-          className={activeSection === 'content' ? 'active' : ''} 
+        <button
+          className={activeSection === 'content' ? 'active' : ''}
           onClick={() => setActiveSection('content')}
         >
           Content
         </button>
-        <button 
-          className={activeSection === 'quiz' ? 'active' : ''} 
+        <button
+          className={activeSection === 'quiz' ? 'active' : ''}
           onClick={() => setActiveSection('quiz')}
         >
           Quiz
         </button>
-        <button 
-          className={activeSection === 'resources' ? 'active' : ''} 
+        <button
+          className={activeSection === 'resources' ? 'active' : ''}
           onClick={() => setActiveSection('resources')}
         >
           Resources
@@ -62,7 +62,7 @@ function CAPTheorem() {
 
       {/* Section Rendering */}
       {activeSection === 'diagram' && (
-        <motion.div 
+        <motion.div
           className="cap-diagram"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -86,41 +86,81 @@ function CAPTheorem() {
         >
           <h2>CAP Theorem</h2>
           <p>
-            The <strong>CAP theorem</strong> states that in a distributed data store, it is impossible to guarantee 
-            all three of the following: <strong>Consistency</strong>, <strong>Availability</strong>, and 
-            <strong> Partition Tolerance</strong>.
+            The <strong>CAP theorem</strong>, also known as Brewer's theorem, is a fundamental principle in the design of distributed systems. It was introduced by computer scientist Eric Brewer in 2000 and articulates the trade-offs between three key properties of distributed databases: <strong>Consistency</strong>, <strong>Availability</strong>, and <strong>Partition Tolerance</strong>. These three properties, abbreviated as CAP, cannot all be guaranteed simultaneously.
           </p>
-          <h3>Real-World Analogy</h3>
+          <h3>Understanding CAP</h3>
           <p>
-            Imagine you are the manager of a busy restaurant with multiple branches. You want every branch (node) to 
-            have up-to-date information about the ingredients in stock (Consistency). You also want each branch to be 
-            able to serve customers even if they can’t communicate with other branches (Availability). Lastly, you need 
-            the system to keep running smoothly even if there’s a communication breakdown between branches (Partition Tolerance).
-          </p>
-          <p>
-            The <strong>CAP theorem</strong> tells us that we can only pick two out of three properties:
+            Imagine managing a distributed system that spans multiple servers or nodes across different locations. Ensuring that every user interacting with the system gets accurate data, that the system is always available, and that it remains resilient to network failures presents unique challenges. The CAP theorem tells us that, in such distributed systems, we can only achieve two out of the three properties at any given time:
           </p>
           <ul>
             <li>
-              <strong>Consistency (C):</strong> Every read receives the most recent write or an error. In our restaurant analogy, 
-              consistency means every branch always has the latest information about ingredient stock.
+              <strong>Consistency (C):</strong> Every read receives the most recent write. In other words, no matter which node a client reads from, they always receive the latest data, ensuring there is no data discrepancy.
             </li>
             <li>
-              <strong>Availability (A):</strong> Every request receives a response, without guarantee that it contains the most 
-              recent write. In the analogy, this means that even if the information is outdated, the branches are always able to 
-              serve customers.
+              <strong>Availability (A):</strong> Every request receives a response, even if some nodes are down. This means the system remains operational and responsive under any condition, but there is no guarantee that the returned data is the most recent.
             </li>
             <li>
-              <strong>Partition Tolerance (P):</strong> The system continues to operate despite an arbitrary number of messages being 
-              dropped by the network between nodes. In our analogy, this means branches can continue serving even when there are 
-              issues with communication between branches.
+              <strong>Partition Tolerance (P):</strong> The system continues to operate despite network partitions, which occur when communication between nodes is lost. This ensures the system remains functional even if parts of it cannot communicate.
             </li>
           </ul>
+
+          <h3>Real-World Analogy</h3>
           <p>
-            You can prioritize consistency and availability, but if a partition happens, the system may not work correctly. 
-            Alternatively, you can choose availability and partition tolerance, but the information may not be consistent 
-            across all branches.
+            Picture a bank with branches across different cities. In a consistent system, every branch must always have the most recent account information. Suppose a customer deposits money at one branch; all other branches should immediately reflect the new balance. However, if the connection between branches is lost, the bank must choose between stopping all transactions until connectivity is restored (ensuring consistency) or allowing each branch to operate independently, even if they temporarily have slightly outdated information (ensuring availability and partition tolerance).
           </p>
+
+          <h3>Exploring the Combinations</h3>
+          <p>
+            The CAP theorem forces distributed system designers to choose two of the three properties:
+          </p>
+          <h4>1. Consistency and Availability (CA)</h4>
+          <p>
+            In a CA system, the system is consistent and always available when there is no network partition. However, in case of a network failure (partition), one of these properties will have to be sacrificed. An example would be a traditional, non-distributed relational database, where consistency and availability are paramount, but the system cannot tolerate partitioning without losing availability.
+          </p>
+          <h4>2. Availability and Partition Tolerance (AP)</h4>
+          <p>
+            In an AP system, the system will remain operational and respond to requests even if parts of the network fail. However, consistency may be sacrificed, meaning users may get slightly outdated data. Amazon’s DynamoDB is a great example of an AP system—it prioritizes availability and partition tolerance but may offer eventual consistency during network issues.
+          </p>
+          <h4>3. Consistency and Partition Tolerance (CP)</h4>
+          <p>
+            A CP system ensures that all nodes have the same data, even during network partitions, but may sacrifice availability during those periods. Google's Spanner, a globally distributed database, aims for consistency and partition tolerance. During network failures, it might sacrifice immediate availability to maintain consistent data across all nodes.
+          </p>
+
+          <h3>Why is the CAP Theorem Important?</h3>
+          <p>
+            The CAP theorem plays a crucial role in distributed system design as it helps developers make informed decisions regarding which properties are most critical for their use case. Depending on the nature of the application, different trade-offs need to be considered:
+          </p>
+          <ul>
+            <li>
+              <strong>Financial Systems:</strong> Consistency is often prioritized since data accuracy is paramount. Imagine an ATM system showing different balances at different locations—that’s something we cannot afford.
+            </li>
+            <li>
+              <strong>Social Media Platforms:</strong> Availability is prioritized so that users can always post content, even if the data across all nodes isn’t perfectly synchronized at that moment. It’s okay if the number of likes on a post takes a few moments to update accurately.
+            </li>
+          </ul>
+
+          <h3>Real-World Examples of CAP Theorem Implementation</h3>
+          <h4>Amazon DynamoDB (AP System)</h4>
+          <p>
+            Amazon DynamoDB is a prime example of an AP system. It ensures that the system is always available, and it can tolerate network partitions. During network issues, DynamoDB prioritizes availability and may return slightly outdated information, eventually synchronizing data across all nodes to achieve consistency.
+          </p>
+          <h4>Google Spanner (CP System)</h4>
+          <p>
+            Google Spanner provides consistency and partition tolerance. By using GPS and atomic clocks to synchronize nodes across data centers, Spanner ensures that data remains consistent. However, achieving such strong consistency might come at the cost of immediate availability during network partitions.
+          </p>
+
+          <h3>Practical Implications for Developers</h3>
+          <p>
+            Understanding CAP theorem allows developers to make practical trade-offs when designing distributed systems:
+          </p>
+          <ul>
+            <li>
+              <strong>Choosing Availability over Consistency:</strong> For applications where user experience is key, such as social media or streaming services, maintaining availability and allowing for eventual consistency is often more critical.
+            </li>
+            <li>
+              <strong>Prioritizing Consistency:</strong> For use cases such as e-commerce transactions or banking, consistency is crucial to ensure users have accurate information, even if that means sacrificing availability during network issues.
+            </li>
+          </ul>
         </motion.div>
       )}
 
@@ -150,7 +190,7 @@ function CAPTheorem() {
           ) : (
             <div className="quiz-results">
               <h4>Quiz Finished!</h4>
-              <p>You answered {answers.filter(a => a === 'Correct').length} out of {questions.length} questions correctly!</p>
+              <p>You answered {answers.filter((a) => a === 'Correct').length} out of {questions.length} questions correctly!</p>
             </div>
           )}
         </div>

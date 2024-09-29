@@ -86,19 +86,41 @@ function ProxyServer() {
         >
           <h2>Proxy Server</h2>
           <p>
-            A proxy server acts as an intermediary between a client and the internet, enhancing security, privacy, and performance. 
-            It is often used to cache web pages and reduce bandwidth usage.
+            A proxy server acts as an intermediary between a client and the internet, enhancing security, privacy, and performance.
+            It is often used to cache web pages and reduce bandwidth usage, allowing for faster load times and decreased latency.
           </p>
 
           <h3>How Proxy Servers Work</h3>
           <p>
-            Proxy servers intercept requests from clients and forward them to the intended server, then return the response to the client.
+            When a client makes a request, the proxy server intercepts that request, forwards it to the desired destination, and then 
+            returns the response back to the client. This helps mask the client’s IP address and can be used to bypass geographical restrictions.
           </p>
 
           <h3>Example of Proxy Server Usage</h3>
           <p>
-            Many organizations use proxy servers to control employee internet access and to monitor web traffic for security purposes.
+            Organizations often utilize proxy servers to control employee internet access and to monitor web traffic for security purposes. 
+            For instance, a company might block access to social media sites while allowing access to necessary business applications.
           </p>
+
+          <h3>Types of Proxy Servers</h3>
+          <ul>
+            <li>
+              **Forward Proxy**: Directs client requests to the internet, acting on behalf of the client.
+            </li>
+            <li>
+              **Reverse Proxy**: Receives requests from the internet and forwards them to the appropriate backend server, often used to distribute load.
+            </li>
+            <li>
+              **Transparent Proxy**: Does not modify requests or responses, often used for caching without client configuration.
+            </li>
+          </ul>
+
+          <h3>Benefits of Using Proxy Servers</h3>
+          <ul>
+            <li>**Enhanced Security**: By masking IP addresses, proxy servers provide an additional layer of security for clients.</li>
+            <li>**Improved Performance**: Caching frequently accessed content reduces load times and bandwidth usage.</li>
+            <li>**Access Control**: Organizations can implement policies to restrict user access to certain websites or services.</li>
+          </ul>
         </motion.div>
       )}
 
