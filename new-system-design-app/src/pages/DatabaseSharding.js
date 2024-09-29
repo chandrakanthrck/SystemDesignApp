@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/DatabaseSharding.css'; // Importing the specific CSS file
 import databaseShardingQuestions from '../data/DatabaseShardingQuestions'; // Import questions from the separate file
 

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/APIGateway.css';
+import '../styles/globalStyles.css';
 import apiGatewayQuestions from '../data/APIGatewayQuestions'; // Import questions from the separate file
 
 function APIGateway() {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/LatencyVsThroughput.css'; // Ensure correct CSS import
 import latencyThroughputQuestions from '../data/LatencyThroughputQuestions'; // Import questions from a separate file
 

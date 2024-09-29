@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/Checksum.css'; // Updated to use Checksum-specific CSS file
 import checksumQuestions from '../data/ChecksumQuestions'; // Import questions from the separate file
 

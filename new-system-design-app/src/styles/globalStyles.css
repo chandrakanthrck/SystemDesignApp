@@ -4,14 +4,14 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* A lighter gray for a soft background feel */
-    color: #333;
+    background-color: #121212; /* Dark background for a modern look */
+    color: #E0E0E0; /* Light text color for better contrast */
     line-height: 1.6;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions for a more dynamic feel */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions */
 }
 
 h1, h2, h3 {
-    color: #007acc; /* A bright blue color to make headings pop */
+    color: #BB86FC; /* Purple color for headings */
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -35,18 +35,18 @@ p {
     font-size: 1.1em;
     line-height: 1.8;
     margin-bottom: 1.5em;
-    color: #444; /* Darker text for improved readability */
+    color: #E0E0E0; /* Maintain light color for readability */
 }
 
 a {
-    color: #2e86de;
+    color: #03DAC5; /* Teal color for links */
     text-decoration: none;
-    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth color change and underline for hover effect */
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth transitions */
 }
 
 a:hover {
-    color: #0056a3; /* A darker shade to emphasize hover effect */
-    text-decoration: underline; /* Add underline on hover */
+    color: #018786; /* Darker teal on hover */
+    text-decoration: underline; /* Underline on hover */
 }
 
 button {
@@ -54,25 +54,25 @@ button {
     padding: 10px 20px;
     margin-top: 20px;
     font-size: 1em;
-    background-color: #007acc; /* Button with primary blue color */
+    background-color: #BB86FC; /* Button with purple background */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth background and transform effects */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth effects */
 }
 
 button:hover {
-    background-color: #0056a3; /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly enlarge to indicate hover */
+    background-color: #3700B3; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight enlargement */
 }
 
 button:active {
-    transform: scale(0.95); /* Slight compression to indicate button press */
+    transform: scale(0.95); /* Slight compression on press */
 }
 
 .container {
-    padding: 40px;
+    padding: 20px; /* Adjusted for better spacing */
     max-width: 1200px;
     margin: auto;
 }
@@ -82,76 +82,76 @@ img {
     height: auto;
     display: block;
     margin: 20px 0;
-    border-radius: 8px; /* Rounded corners for a softer image presentation */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a modern touch */
+    border-radius: 8px; /* Soft corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark shadow for a modern touch */
 }
 
 blockquote {
     margin: 20px 0;
     padding: 20px;
-    background-color: #e8f0fe; /* Light blue background for block quotes */
-    border-left: 5px solid #007acc;
+    background-color: #1F1F1F; /* Dark background for block quotes */
+    border-left: 5px solid #BB86FC; /* Purple left border */
     font-style: italic;
-    color: #333;
+    color: #E0E0E0; /* Consistent text color */
 }
 
 code {
-    background-color: #f1f1f1;
+    background-color: #E1E1E1; /* Light background for code */
     padding: 5px;
     font-size: 0.95em;
 }
 
 pre {
-    background-color: #282c34; /* Darker background for code blocks */
+    background-color: #1E1E1E; /* Darker code block background */
     padding: 15px;
     border-radius: 5px;
-    color: #f8f8f2; /* Light text for better readability on dark background */
+    color: #E0E0E0; /* Light text for readability */
+    overflow-x: auto;
+    font-size: 0.9em;
 }
 
-/* Smooth transition effect for the entire application */
 * {
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+.header, .footer {
+    background-color: #1B1B1B; /* Dark background for header and footer */
+    color: #E0E0E0; /* Light text color for contrast */
+    padding: 15px; /* Consistent padding */
+    text-align: center; /* Centered text */
+}
+
+.header-title, .footer-text {
+    margin: 0; /* Remove default margins */
+    font-weight: bold; /* Bold text */
+}
+
+/* Consistent layout for all content sections */
+.content {
+    padding: 20px;
+    background-color: #181818; /* Dark background for content */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Margin for spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /* Dark shadow for depth */
 }
 
 /* Accessibility Focus Styles */
 button:focus,
 a:focus {
-    outline: 2px solid #007acc; /* Blue outline for focused elements */
+    outline: 2px solid #BB86FC; /* Outline for focused elements */
 }
 
-/* Form Element Styles */
-input, textarea, select {
-    font-size: 1em;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    margin-bottom: 20px;
-    transition: border-color 0.3s ease-in-out;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Responsive font size */
+    }
 
-input:focus, textarea:focus, select:focus {
-    border-color: #007acc; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
-}
+    h2 {
+        font-size: 1.5em; /* Responsive font size */
+    }
 
-/* Dark Mode Support */
-body.dark-mode {
-    background-color: #181818; /* Dark background */
-    color: #f5f5f5; /* Light text */
-}
-
-.dark-mode button {
-    background-color: #444; /* Darker button */
-    color: #f5f5f5;
-}
-
-/* Additional Styles for Forms */
-button[type="submit"] {
-    background-color: #28a745; /* Green background for submit buttons */
-}
-
-button[type="submit"]:hover {
-    background-color: #218838; /* Darker green on hover */
+    h3 {
+        font-size: 1.2em; /* Responsive font size */
+    }
 }

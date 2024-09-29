@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/CircuitBreaker.css'; // Updated to use CircuitBreaker-specific CSS file
 import circuitBreakerQuestions from '../data/CircuitBreakerQuestions'; // Import questions from the separate file
 

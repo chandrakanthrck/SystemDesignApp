@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/MessageQueues.css'; // Ensure correct CSS import
 import messageQueuesQuestions from '../data/MessageQueuesQuestions'; // Import the questions from the separate file
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/Idempotency.css'; // Ensure correct CSS import
 import idempotencyQuestions from '../data/IdempotencyQuestions'; // Import questions from a separate file
 

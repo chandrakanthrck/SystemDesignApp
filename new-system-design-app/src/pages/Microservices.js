@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/Microservices.css'; // Ensure the correct CSS file is imported
 import microservicesQuestions from '../data/MicroservicesArchitectureQuestions'; // Import quiz questions
 

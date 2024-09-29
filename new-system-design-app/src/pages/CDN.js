@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/CDN.css'; // Use a separate CSS file for specific concept styling.
 import cdnQuestions from '../data/CDNQuestions'; // Import the questions from the separate file
 

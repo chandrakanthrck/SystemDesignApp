@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/ConsistentHashing.css'; // Importing the specific CSS file
 import consistentHashingQuestions from '../data/ConsistentHashingQuestions'; // Import questions from the separate file
 

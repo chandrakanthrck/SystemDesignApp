@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Caching.css';
+import '../styles/globalStyles.css';
 import cachingQuestions from '../data/CachingQuestions'; // Import questions from the separate file
 
 function Caching() {

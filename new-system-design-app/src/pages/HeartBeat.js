@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/HeartBeat.css'; // Importing the specific CSS file
 import heartbeatQuestions from '../data/HeartBeatQuestions'; // Import questions from the separate file
 

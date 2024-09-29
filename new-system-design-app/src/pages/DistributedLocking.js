@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/DistributedLocking.css'; // Importing the specific CSS file
 import distributedLockingQuestions from '../data/DistributedLockingQuestions'; // Import questions from the separate file
 

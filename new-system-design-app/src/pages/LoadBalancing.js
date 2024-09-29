@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/LoadBalancing.css'; // Ensure correct CSS import
 import loadBalancingQuestions from '../data/LoadBalancingQuestions'; // Import the questions from the separate file
 

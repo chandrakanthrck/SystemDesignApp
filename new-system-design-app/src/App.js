@@ -1,3 +1,4 @@
+// src/App.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -36,14 +37,16 @@ import APIGateway from './pages/APIGateway';
 import DistributedLocking from './pages/DistributedLocking';
 import Checksum from './pages/Checksum';
 import Quiz from './pages/Quiz';
+import HomePage from './pages/HomePage'; // Add your homepage import
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
       <NavBar />
-      <div className="content">
+      <main className="content">
         <Routes>
+          <Route path="/" element={<HomePage />} /> {/* Default route */}
           <Route path="/cdn" element={<CDN />} />
           <Route path="/caching" element={<Caching />} />
           <Route path="/distributed-caching" element={<DistributedCaching />} />
@@ -76,7 +79,7 @@ function App() {
           <Route path="/checksum" element={<Checksum />} />
           <Route path="/quiz/:topic" element={<Quiz />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </div>
   );

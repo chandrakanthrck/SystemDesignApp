@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/CAPTheorem.css';
+import '../styles/globalStyles.css';
 import capTheoremQuestions from '../data/CAPTheoremQuestions'; // Import questions from the separate file
 
 function CAPTheorem() {

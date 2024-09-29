@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/DNS.css'; // Importing the specific CSS file
 import dnsQuestions from '../data/DNSQuestions'; // Import questions from the separate file
 

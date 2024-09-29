@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Header from '../components/Header'; // Ensure Header is included
 import Footer from '../components/Footer'; // Ensure Footer is included
 import '../styles/BatchVsStreamProcessing.css';
+import '../styles/globalStyles.css';
 import batchVsStreamQuestions from '../data/BatchVsStreamQuestions';
 
 function BatchVsStreamProcessing() {

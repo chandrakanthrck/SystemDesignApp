@@ -1,8 +1,6 @@
-// src/pages/ACIDTransactions.js
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../styles/ACIDTransactions.css';
+import '../styles/globalStyles.css'; // Import global styles
 import acidQuestions from '../data/ACIDQuestions';
 
 function ACIDTransactions() {
@@ -33,7 +31,7 @@ function ACIDTransactions() {
   };
 
   return (
-    <div className="acid-container">
+    <div className="container acid-container">
       {/* Top Navigation Bar */}
       <div className="top-bar">
         <button className={activeSection === 'diagram' ? 'active-button' : ''} onClick={() => setActiveSection('diagram')}>
@@ -53,7 +51,7 @@ function ACIDTransactions() {
       {/* Section Rendering */}
       {activeSection === 'diagram' && (
         <motion.div
-          className="acid-diagram"
+          className="acid-diagram content"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.2 }}
@@ -69,7 +67,7 @@ function ACIDTransactions() {
 
       {activeSection === 'content' && (
         <motion.div
-          className="acid-content"
+          className="acid-content content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -94,25 +92,25 @@ function ACIDTransactions() {
 
           <h3>Atomicity</h3>
           <p>
-            Atomicity is the all-or-nothing principle. When you initiate a transaction, it must either complete fully or not at all. Think of it as a package deal; if any part of the transaction fails, the entire transaction rolls back, leaving the database unchanged. 
+            Atomicity is the all-or-nothing principle. When you initiate a transaction, it must either complete fully or not at all. Think of it as a package deal; if any part of the transaction fails, the entire transaction rolls back, leaving the database unchanged.
             For example, if you transfer money between bank accounts, both the debit and credit operations must succeed together. If one part fails, neither operation is applied, ensuring the database remains in its original state.
           </p>
 
           <h3>Consistency</h3>
           <p>
-            Consistency ensures that the database remains in a valid state before and after the transaction. This means all data integrity constraints are maintained throughout the transaction. If a transaction violates any integrity rules, it will not be committed. 
+            Consistency ensures that the database remains in a valid state before and after the transaction. This means all data integrity constraints are maintained throughout the transaction. If a transaction violates any integrity rules, it will not be committed.
             For instance, if you have a rule that prevents negative balances in bank accounts, any transaction attempting to overdraw an account will be aborted. This ensures that all transactions lead the database from one consistent state to another, maintaining the correctness of the data.
           </p>
 
           <h3>Isolation</h3>
           <p>
-            Isolation means that concurrent transactions do not interfere with each other. Each transaction operates independently, and intermediate states are not visible to other transactions. This prevents issues like dirty reads, where one transaction reads uncommitted changes from another. 
+            Isolation means that concurrent transactions do not interfere with each other. Each transaction operates independently, and intermediate states are not visible to other transactions. This prevents issues like dirty reads, where one transaction reads uncommitted changes from another.
             For example, if two users are updating the same account balance simultaneously, isolation ensures that each transaction is processed in a way that they do not see each other’s uncommitted changes. This maintains data consistency and prevents anomalies.
           </p>
 
           <h3>Durability</h3>
           <p>
-            Durability guarantees that once a transaction is committed, its effects are permanent, even in the event of a system failure. This means that the changes made by the transaction are saved to non-volatile storage. 
+            Durability guarantees that once a transaction is committed, its effects are permanent, even in the event of a system failure. This means that the changes made by the transaction are saved to non-volatile storage.
             For example, if you update a customer’s address in a database and the transaction commits, this change will persist even if the system crashes immediately afterward. Durability ensures that committed transactions are not lost and the database can recover to a consistent state after a failure.
           </p>
 
@@ -120,19 +118,19 @@ function ACIDTransactions() {
 
           <h3>Data Integrity</h3>
           <p>
-            Data integrity is a cornerstone of ACID transactions. When you perform operations on your database, you want to ensure that the data remains accurate and consistent. ACID transactions achieve this by enforcing rules that prevent data corruption and inconsistencies. 
+            Data integrity is a cornerstone of ACID transactions. When you perform operations on your database, you want to ensure that the data remains accurate and consistent. ACID transactions achieve this by enforcing rules that prevent data corruption and inconsistencies.
             For instance, if you are updating multiple related records, ACID properties ensure that all changes are applied correctly and that the database remains in a valid state. This prevents scenarios where partial updates could lead to data anomalies, ensuring that your data is always reliable.
           </p>
 
           <h3>Reliability</h3>
           <p>
-            Reliability in database systems means that once a transaction is committed, its effects are permanent. This is a key benefit of ACID transactions. When you commit a transaction, the changes are stored in a way that they persist even if the system crashes immediately afterward. 
+            Reliability in database systems means that once a transaction is committed, its effects are permanent. This is a key benefit of ACID transactions. When you commit a transaction, the changes are stored in a way that they persist even if the system crashes immediately afterward.
             This guarantees that your data remains stable and dependable. For example, if you update a customer’s order status, you can be confident that this update will not be lost, providing a consistent and reliable experience for your users.
           </p>
 
           <h3>Concurrency Control</h3>
           <p>
-            Concurrency control allows multiple transactions to execute concurrently without interfering with each other. This is particularly important in multi-user environments where several users might be accessing and modifying the database simultaneously. 
+            Concurrency control allows multiple transactions to execute concurrently without interfering with each other. This is particularly important in multi-user environments where several users might be accessing and modifying the database simultaneously.
             ACID transactions manage concurrency by isolating transactions from each other, ensuring that one transaction’s intermediate states are not visible to others. This maintains data consistency and prevents issues such as dirty reads.
           </p>
 
@@ -153,13 +151,12 @@ function ACIDTransactions() {
             If all operations are successful, the transaction is committed, permanently applying changes. Otherwise, the transaction is rolled back, reverting the database to its initial state before the transaction began.
           </p>
 
-          {/* More comprehensive content can be added here to match a full tech blog page */}
         </motion.div>
       )}
 
       {activeSection === 'quiz' && (
         <motion.div
-          className="quiz-section"
+          className="quiz-section content" // Ensure quiz section aligns with content styling
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -217,7 +214,7 @@ function ACIDTransactions() {
 
       {activeSection === 'resources' && (
         <motion.div
-          className="reference-links"
+          className="reference-links content" // Aligns resources section with content styling
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}

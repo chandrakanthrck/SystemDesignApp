@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import '../styles/globalStyles.css';
 import '../styles/DistributedCaching.css'; // Importing the specific CSS file
 import distributedCachingQuestions from '../data/DistributedCachingQuestions'; // Import questions from the separate file
 
